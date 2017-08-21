@@ -3,6 +3,7 @@ output: github_document
 ---
 
 [![Travis-CI Build Status](https://travis-ci.org/muschellij2/muschpack.svg?branch=master)](https://travis-ci.org/muschellij2/muschpack)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/muschpack?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/muschpack)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
