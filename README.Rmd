@@ -37,6 +37,6 @@ library(muschpack)
 library(dplyr)
 df = r_package_repos(username = "muschellij2")
 mine = df %>% filter(!fork & r_repo)
-
+mine = mine %>% filter(!grepl("^test", bare))
 knitr::kable(mine[, c("gh_link", "travis_badge", "appveyor_badge")])
 ```
