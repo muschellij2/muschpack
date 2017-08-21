@@ -28,9 +28,7 @@ You can install muschpack from github with:
 devtools::install_github("muschellij2/muschpack")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+# Package Check Report
 
 ```{r example}
 library(muschpack)

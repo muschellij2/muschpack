@@ -45,8 +45,9 @@ r_package_repos = function(username = "muschellij2", ...) {
   df$gh_repo = paste0("https://github.com/",
                        df$remote)
   df$gh_link = paste0("[", df$remote, "](", df$gh_repo, ")")
-  df$appveyor = paste0("https://ci.appveyor.com/api/projects/status/github/",
+  df$appveyor = paste0("https://ci.appveyor.com/project/",
                        df$remote)
+
   df$appveyor_badge = paste0("[![AppVeyor Build Status](",
                              df$appveyor, "?branch=master&svg=true)](",
                              df$appveyor, ")")
