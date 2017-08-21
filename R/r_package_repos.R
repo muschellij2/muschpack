@@ -44,7 +44,7 @@ r_package_repos = function(username = "muschellij2", ...) {
 
   df$gh_repo = paste0("https://github.com/",
                        df$remote)
-  df$gh_link = paste0("[", df$remote, "](", df$gh_repo, ")")
+  df$gh_link = paste0("[", df$bare, "](", df$gh_repo, ")")
   df$appveyor = paste0("https://ci.appveyor.com/project/",
                        df$remote)
 
