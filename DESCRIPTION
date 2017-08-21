@@ -22,6 +22,7 @@ Suggests: knitr,
     rmarkdown,
     testthat
 VignetteBuilder: knitr
+Remotes: muschellij2/ghtravis, muschellij2/neuroc.deps
 RoxygenNote: 6.0.1.9000
 URL: https://github.com/muschellij2/muschpack
 BugReports: https://github.com/muschellij2/muschpack/issues
