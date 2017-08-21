@@ -10,7 +10,7 @@
 #' @importFrom pbapply pbsapply
 #' @importFrom ghtravis get_remote_package_dcf
 #' @importFrom data.table rbindlist
-#' @importFrom dplyr data_frame as_data_frame "%>%"
+#' @importFrom dplyr data_frame as_data_frame "%>%" one_of
 #' @importFrom tidyr nest
 r_package_repos = function(username = "muschellij2", ...) {
   repos = neuroc.deps::get_all_repos(username = username, ...)
@@ -31,7 +31,7 @@ r_package_repos = function(username = "muschellij2", ...) {
   df = cbind(df, repo_info)
   cn = colnames(repo_info)
   cn = setdiff(cn, c("fork", "language"))
-  df = df %>% tidyr::nest(one_of(cn), .key = repo_info)
+  df = df %>% tidyr::nest(dplyr::one_of(cn), .key = repo_info)
   df$fork = as.logical(df$fork)
   df$travis = paste0("https://travis-ci.org/", df$remote)
 
