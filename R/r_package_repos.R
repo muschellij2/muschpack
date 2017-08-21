@@ -30,9 +30,10 @@ r_package_repos = function(username = "muschellij2", ...) {
 
   df = cbind(df, repo_info)
   cn = colnames(repo_info)
-  cn = setdiff(cn, c("fork", "language"))
+  cn = setdiff(cn, c("fork", "language", "open_issues_count"))
   df = df %>% tidyr::nest(dplyr::one_of(cn), .key = repo_info)
   df$fork = as.logical(df$fork)
+  df$open_issues_count = as.numeric(df$open_issues_count)
   df$travis = paste0("https://travis-ci.org/", df$remote)
 
   df$travis_badge = paste0("[![Travis-CI Build Status](",
