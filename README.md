@@ -34,8 +34,11 @@ library(dplyr)
 df = r_package_repos(username = "muschellij2")
 mine = df %>% filter(!fork & r_repo)
 mine = mine %>% filter(!grepl("^test", bare))
-mine = mine[, c("gh_link", "travis_badge", "appveyor_badge", "open_issues_count")]
-colnames(mine) = c("GitHub Link", "Travis Status", "Appveyor Status", "Number of Issues")
+mine = mine %>% 
+  select(gh_link, travis_badge, 
+         appveyor_badge, open_issues_count)
+colnames(mine) = c("GitHub Link", "Travis Status", 
+                   "Appveyor Status", "Number of Issues")
 knitr::kable(mine)
 ```
 
