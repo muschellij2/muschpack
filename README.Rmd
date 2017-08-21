@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+[![Travis-CI Build Status](https://travis-ci.org/muschellij2/muschpack.svg?branch=master)](https://travis-ci.org/muschellij2/muschpack)
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# muschpack
+
+The `muschpack` package: Provides a build status for all John 'Muschelli' 'GitHub' packages.
+
+
+## Installation
+
+You can install muschpack from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("muschellij2/muschpack")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(muschpack)
+library(dplyr)
+df = r_package_repos(username = "muschellij2")
+mine = df %>% filter(!fork & r_repo)
+knitr::kable(mine[, c("bare", "travis_badge", "appveyor_badge")])
+```

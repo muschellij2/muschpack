@@ -2,13 +2,18 @@
 % Please edit documentation in R/r_package_repos.R
 \name{r_package_repos}
 \alias{r_package_repos}
-\title{R Package Repositories}
+\title{Package Repository Information}
 \usage{
-r_package_repos(...)
+r_package_repos(username = "muschellij2", ...)
+}
+\arguments{
+\item{username}{GitHub username}
+
+\item{...}{additional to arguments to \code{get_all_repos}}
 }
 \value{
-A \code{data.frame}
+A nested \code{data.frame} of repository information
 }
 \description{
-R Package Repositories
+Grabs all repository information from GitHub
 }

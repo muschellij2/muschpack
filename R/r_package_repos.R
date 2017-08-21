@@ -1,7 +1,10 @@
-
-#' R Package Repositories
+#' Package Repository Information
 #'
-#' @return A \code{data.frame}
+#' Grabs all repository information from GitHub
+#'
+#' @return A nested \code{data.frame} of repository information
+#' @param username GitHub username
+#' @param ... additional to arguments to \code{get_all_repos}
 #' @export
 #' @importFrom neuroc.deps get_all_repos
 #' @importFrom pbapply pbsapply
@@ -9,32 +12,43 @@
 #' @importFrom data.table rbindlist
 #' @importFrom dplyr data_frame as_data_frame "%>%"
 #' @importFrom tidyr nest
-r_package_repos = function(...) {
-  username = "muschellij2"
-  repos = neuroc.deps::get_all_repos(username = username)
-  # repos = neuroc.deps::get_all_repos(...)
-  forks = vapply(repos, FUN = `[[`, "fork", FUN.VALUE = logical(1))
+r_package_repos = function(username = "muschellij2", ...) {
+  repos = neuroc.deps::get_all_repos(username = username, ...)
   remotes = vapply(repos, `[[`, "full_name", FUN.VALUE = character(1))
   names(repos) = remotes
-  urls = paste0("https://travis-ci.org/", remotes, ".svg?branch=master")
   dd = pbapply::pbsapply(remotes, ghtravis::has_remote_dcf)
 
-  df = data_frame(
+  df = dplyr::data_frame(
     remote = remotes,
     r_repo = dd
   )
-  repo_info = lapply(repos, function(x) as_data_frame(t(unlist(x))))
+  repo_info = lapply(repos, function(x) {
+    dplyr::as_data_frame(t(unlist(x)))
+  })
   repo_info = data.table::rbindlist(repo_info, fill = TRUE)
-  repo_info = as_data_frame(repo_info)
+  repo_info = dplyr::as_data_frame(repo_info)
 
   df = cbind(df, repo_info)
-  cn = colnames(repo_info )
+  cn = colnames(repo_info)
   cn = setdiff(cn, c("fork", "language"))
   df = df %>% tidyr::nest(one_of(cn), .key = repo_info)
+  df$fork = as.logical(df$fork)
+  df$travis = paste0("https://travis-ci.org/", df$remote)
+
+  df$travis_badge = paste0("[![Travis-CI Build Status](",
+                    df$travis, ".svg?branch=master)](",
+                    df$travis, ")")
+  df$bare = vapply(strsplit(df$remote, "/"), function(x) {
+    x[length(x)]
+  }, FUN.VALUE = character(1))
+
+  df$appveyor = paste0("https://ci.appveyor.com/api/projects/status/github/",
+                       df$remote)
+  df$appveyor_badge = paste0("[![AppVeyor Build Status](",
+                             df$appveyor, "?branch=master&svg=true)](",
+                             df$appveyor)
   return(df)
 }
 
-#
-#   res = pbapply::pblapply(urls, httr::HEAD, httr::content_type("image/svg+xml"))
-#
-# }
+
+
