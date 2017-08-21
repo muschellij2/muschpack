@@ -36,18 +36,23 @@ r_package_repos = function(username = "muschellij2", ...) {
   df$open_issues_count = as.numeric(df$open_issues_count)
   df$travis = paste0("https://travis-ci.org/", df$remote)
 
-  df$travis_badge = paste0("[![Travis-CI Build Status](",
-                    df$travis, ".svg?branch=master)](",
-                    df$travis, ")")
+  df$travis_badge = paste0(
+    "[![Travis-CI Build Status](",
+    df$travis, ".svg?branch=master)](",
+    df$travis, ")")
+
   df$bare = vapply(strsplit(df$remote, "/"), function(x) {
     x[length(x)]
   }, FUN.VALUE = character(1))
 
   df$gh_repo = paste0("https://github.com/",
-                       df$remote)
-  df$gh_link = paste0("[", df$bare, "](", df$gh_repo, ")")
-  df$appveyor = paste0("https://ci.appveyor.com/project/",
-                       df$remote)
+                      df$remote)
+  df$issues_page = paste0(df$gh_repo, "/issues")
+  df$gh_link = paste0(
+    "[", df$bare, "](", df$gh_repo, ")")
+  df$appveyor = paste0(
+    "https://ci.appveyor.com/project/",
+    df$remote)
 
   df$appveyor_badge = paste0(
     "[![AppVeyor Build Status](",
