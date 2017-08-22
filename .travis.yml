@@ -2,9 +2,12 @@ language: R
 sudo: false
 cache: packages
 warnings_are_errors: true
+
+before_script:
+  - export GITHUB_PAT=[secure]
 os:
-- linux
-- osx
+  - linux
+  - osx
 before_deploy:
   - R CMD INSTALL --build ${PKG_TARBALL}
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then rm -f *.tar.gz fi
