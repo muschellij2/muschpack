@@ -1,20 +1,22 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
-
 language: R
 sudo: false
 cache: packages
 warnings_are_errors: true
-
 os:
-  - linux
-  - osx
-
-# need this explicitly
-# for naming convention
+- linux
+- osx
 before_deploy:
   - R CMD INSTALL --build ${PKG_TARBALL}
-  # so no overwrite of linux build
-  - if [ "$TRAVIS_OS_NAME" == "osx" ];
-    then
-    rm -f *.tar.gz
-    fi
+  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then rm -f *.tar.gz fi
+
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: Vs/tfwPLhtZ7IdLTiLucBQMXvPf/TVSgQBE+02o7Wln4g7D4ZXSyGgNyAqF0cSytGKUqmNazyu/XzSh56IlXMb6kuwHt96FdY0xY4bZSC2YSw66LGGuJBPIiNDqlt7HRDedpYpuFTVvJgz9ymi7QgDpNHx9eOhcSZR/ZyKbOCzJAxERwwgS9CV/i55xBieUwVw73kxq5ZhdyaBsN7Dgcva6KST2FPxEeiaMOj4efd40hMHWPIMqicsoHyA2QthS/T+6mY2qpMIBaC7K7uZbPa2boc00hKmo4uAgIMOnz47QqauQTttq1Me7zP7bKWoHcl9PsGmrRj3hYDx1BFOGoVZgj7NbmjScWZodjBVAc4QgO7SHz/lsDpQvb1blSRKahJX+Hp5F6jdK7rOxoj/m2fPE/XXpzc3HgI3v+sDPTTzMo7qebS42rEVQumJhGVWgAlVLf9rkUoaSfVYuCY9XpAy+vSZvRX9fyGvnyjS8wA/3zFpI3qJrOhU1dkm7GRT+2JE/nwdfV/E0+2iN9grNw6J9n79b9WZYl89iaBa3cwfluY8ChNeB60hBGBKNiB7ERwsulRUW8qc1SUJxjhhvJ8E1Y9ibRXdlRWoWyBLVF3XdvY/vou9mNYMMGUYfnwf3jgYQBPW69b1ZUS3Wp5tBIdyBGL+tHPgdJzGQBXcw0Nuk=
+  file_glob: true
+  file: muschpack*.t*gz
+  on:
+    tags: true
+    repo: muschellij2/muschpack
+
