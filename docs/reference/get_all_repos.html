@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • muschpack</title>
+<title>Get all GitHub repositories for a user — get_all_repos • muschpack</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -34,7 +34,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -72,40 +72,40 @@
       </header>
 
       <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Function reference</h1>
-      <h4>version&nbsp;0.4</h4>
+    <h1>Get all GitHub repositories for a user</h1>
     </div>
 
-    <div class="contents">
-      <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-      <p class="section-desc"></p>
-
-      
-      <p><a href="get_all_repos.html">Get all GitHub repositories for a user</a></p>
-      <ul>
-        <li><code><a href="get_all_repos.html">get_all_repos</a></code></li>
-      </ul>
-      
-      <p><a href="r_package_repos.html">Package Repository Information</a></p>
-      <ul>
-        <li><code><a href="r_package_repos.html">r_package_repos</a></code></li>
-      </ul>
-      
-      <p><a href="repo_contents.html">Get Repository Contents</a></p>
-      <ul>
-        <li><code><a href="repo_contents.html">repo_contents</a></code></li><li><code><a href="repo_contents.html">repo_files</a></code></li><li><code><a href="repo_contents.html">has_remote_dcf</a></code></li>
-      </ul>
     
-    </div>
-  </div>
+    <p>Get all the repository information for a GitHub account</p>
+    
 
+    <pre><span class='fu'>get_all_repos</span>(<span class='kw'>username</span> <span class='kw'>=</span> <span class='st'>"neuroconductor"</span>, <span class='kw'>per_page</span> <span class='kw'>=</span> <span class='fl'>100</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <dl class="dl-horizontal">
+      <dt>username</dt>
+      <dd>GitHub username to pull</dd>
+      <dt>per_page</dt>
+      <dd>Number of repos to try to pull per page.
+Default is maximum of 100</dd>
+    </dl>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>List of package information</p>
+    
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
-    </ul>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+          </ul>
+
   </div>
 </div>
 

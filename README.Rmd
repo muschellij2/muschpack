@@ -31,7 +31,7 @@ devtools::install_github("muschellij2/muschpack")
 
 # Package Check Report
 
-```{r example}
+```{r example, results = 'asis'}
 library(muschpack)
 library(dplyr)
 df = r_package_repos(username = "muschellij2")
