@@ -37,8 +37,8 @@ library(dplyr)
 df = r_package_repos(username = "muschellij2")
 mine = df %>% filter(!fork & r_repo)
 mine = mine %>% 
-  filter(!grepl("^test", bare))
-  arrange(mine, desc(open_issues_count), bare)
+  filter(!grepl("^test", bare)) %>% 
+  arrange(desc(open_issues_count), bare)
 mine$issues_page = paste0("[", mine$open_issues_count, "](", 
                           mine$issues_page, ")")
 mine = mine %>% 
