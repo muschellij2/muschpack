@@ -33,7 +33,25 @@ library(dplyr)
 #>     intersect, setdiff, setequal, union
 df = r_package_repos(username = "muschellij2")
 mine = df %>% filter(!fork & r_repo)
-mine = mine %>% filter(!grepl("^test", bare))
+mine = mine %>% 
+  filter(!grepl("^test", bare))
+  arrange(mine, desc(open_issues_count), bare)
+#> # A tibble: 71 x 14
+#>                        remote r_repo  fork   language open_issues_count
+#>                         <chr>  <lgl> <lgl>      <chr>             <dbl>
+#>  1 muschellij2/clusterRundown   TRUE FALSE          R                 1
+#>  2  muschellij2/neurocInstall   TRUE FALSE          R                 1
+#>  3   muschellij2/papayaWidget   TRUE FALSE JavaScript                 1
+#>  4  muschellij2/processVISION   TRUE FALSE          R                 1
+#>  5         muschellij2/spm12r   TRUE FALSE          R                 1
+#>  6    muschellij2/WhiteStripe   TRUE FALSE          R                 1
+#>  7          muschellij2/afnir   TRUE FALSE          R                 0
+#>  8         muschellij2/brainR   TRUE FALSE JavaScript                 0
+#>  9       muschellij2/checkout   TRUE FALSE          R                 0
+#> 10          muschellij2/cifti   TRUE FALSE          R                 0
+#> # ... with 61 more rows, and 9 more variables: repo_info <list>,
+#> #   travis <chr>, travis_badge <chr>, bare <chr>, gh_repo <chr>,
+#> #   issues_page <chr>, gh_link <chr>, appveyor <chr>, appveyor_badge <chr>
 mine$issues_page = paste0("[", mine$open_issues_count, "](", 
                           mine$issues_page, ")")
 mine = mine %>% 
@@ -47,7 +65,6 @@ knitr::kable(mine)
 | GitHub Link                                                           | Travis Status                                                                                                                                           | Appveyor Status                                                                                                                                                                                    | Number of Issues                                             |
 |:----------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------|
 | [afnir](https://github.com/muschellij2/afnir)                         | [![Travis-CI Build Status](https://travis-ci.org/muschellij2/afnir.svg?branch=master)](https://travis-ci.org/muschellij2/afnir)                         | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/afnir?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/afnir)                         | [0](https://github.com/muschellij2/afnir/issues)             |
-| [ANTsR\_norgl](https://github.com/muschellij2/ANTsR_norgl)            | [![Travis-CI Build Status](https://travis-ci.org/muschellij2/ANTsR_norgl.svg?branch=master)](https://travis-ci.org/muschellij2/ANTsR_norgl)             | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/ANTsR_norgl?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/ANTsR_norgl)             | [0](https://github.com/muschellij2/ANTsR_norgl/issues)       |
 | [brainR](https://github.com/muschellij2/brainR)                       | [![Travis-CI Build Status](https://travis-ci.org/muschellij2/brainR.svg?branch=master)](https://travis-ci.org/muschellij2/brainR)                       | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/brainR?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/brainR)                       | [0](https://github.com/muschellij2/brainR/issues)            |
 | [checkout](https://github.com/muschellij2/checkout)                   | [![Travis-CI Build Status](https://travis-ci.org/muschellij2/checkout.svg?branch=master)](https://travis-ci.org/muschellij2/checkout)                   | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/checkout?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/checkout)                   | [0](https://github.com/muschellij2/checkout/issues)          |
 | [cifti](https://github.com/muschellij2/cifti)                         | [![Travis-CI Build Status](https://travis-ci.org/muschellij2/cifti.svg?branch=master)](https://travis-ci.org/muschellij2/cifti)                         | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/cifti?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/cifti)                         | [0](https://github.com/muschellij2/cifti/issues)             |
