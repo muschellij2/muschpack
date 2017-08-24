@@ -6,21 +6,36 @@
 #' @param username GitHub username
 #' @param ... additional to arguments to \code{get_all_repos}
 #' @export
-#' @importFrom neuroc.deps get_all_repos
 #' @importFrom pbapply pbsapply
-#' @importFrom ghtravis get_remote_package_dcf
 #' @importFrom data.table rbindlist
 #' @importFrom dplyr data_frame as_data_frame "%>%" one_of
 #' @importFrom tidyr nest
 r_package_repos = function(username = "muschellij2", ...) {
-  repos = neuroc.deps::get_all_repos(username = username, ...)
+  repos = get_all_repos(username = username, ...)
   remotes = vapply(repos, `[[`, "full_name", FUN.VALUE = character(1))
   names(repos) = remotes
-  dd = pbapply::pbsapply(remotes, ghtravis::has_remote_dcf)
+  all_files = pbapply::pblapply(remotes, repo_files)
+  # all_files = pbapply::pblapply(remotes, function(x) {
+  #   print(x)
+  #   repo_files(x)
+  #   })
+  dd = sapply(all_files, function(x){
+    "DESCRIPTION" %in% x
+  })
+
+  vignettes = sapply(all_files, function(x){
+    "vignettes" %in% x
+  })
+
+  tests = sapply(all_files, function(x){
+    "tests" %in% x
+  })
 
   df = dplyr::data_frame(
     remote = remotes,
-    r_repo = dd
+    r_repo = dd,
+    tests = tests,
+    vignettes = vignettes
   )
   repo_info = lapply(repos, function(x) {
     dplyr::as_data_frame(t(unlist(x)))

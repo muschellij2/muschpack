@@ -43,8 +43,14 @@ mine$issues_page = paste0("[", mine$open_issues_count, "](",
                           mine$issues_page, ")")
 mine = mine %>% 
   select(gh_link, travis_badge, 
-         appveyor_badge, issues_page)
+         appveyor_badge, issues_page, vignettes, tests)
+mine = mine %>% 
+  mutate(
+    vignettes = ifelse(vignettes, "[X]", ""),
+    tests = ifelse(tests, "[X]", ""))
+
 colnames(mine) = c("GitHub Link", "Travis Status", 
-                   "Appveyor Status", "Number of Issues")
-knitr::kable(mine)
+                   "Appveyor Status", "Number of Issues",
+                   "Vignettes Folder", "Tests Folder")
+knitr::kable(mine, escape = FALSE)
 ```

@@ -79,7 +79,9 @@ devtools<span class="op">::</span><span class="kw">install_github</span>(<span c
 <span class="kw">library</span>(dplyr)
 df =<span class="st"> </span><span class="kw"><a href="reference/r_package_repos.html">r_package_repos</a></span>(<span class="dt">username =</span> <span class="st">"muschellij2"</span>)
 mine =<span class="st"> </span>df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="op">!</span>fork <span class="op">&amp;</span><span class="st"> </span>r_repo)
-mine =<span class="st"> </span>mine <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">grepl</span>(<span class="st">"^test"</span>, bare))
+mine =<span class="st"> </span>mine <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">grepl</span>(<span class="st">"^test"</span>, bare)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(open_issues_count), bare)
 mine<span class="op">$</span>issues_page =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">"["</span>, mine<span class="op">$</span>open_issues_count, <span class="st">"]("</span>, 
                           mine<span class="op">$</span>issues_page, <span class="st">")"</span>)
 mine =<span class="st"> </span>mine <span class="op">%&gt;%</span><span class="st"> </span>
@@ -97,40 +99,64 @@ knitr<span class="op">::</span><span class="kw">kable</span>(mine)</code></pre><
 </tr></thead>
 <tbody>
 <tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/clusterRundown">clusterRundown</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/clusterRundown"><img src="https://travis-ci.org/muschellij2/clusterRundown.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/clusterRundown"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/clusterRundown?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/clusterRundown/issues">1</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/neurocInstall">neurocInstall</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/neurocInstall"><img src="https://travis-ci.org/muschellij2/neurocInstall.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/neurocInstall"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurocInstall?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/neurocInstall/issues">1</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/papayaWidget">papayaWidget</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/papayaWidget"><img src="https://travis-ci.org/muschellij2/papayaWidget.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/papayaWidget"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/papayaWidget?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/papayaWidget/issues">1</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/processVISION">processVISION</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/processVISION"><img src="https://travis-ci.org/muschellij2/processVISION.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/processVISION"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/processVISION?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/processVISION/issues">1</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/spm12r">spm12r</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/spm12r"><img src="https://travis-ci.org/muschellij2/spm12r.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/spm12r"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/spm12r?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/spm12r/issues">1</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/WhiteStripe">WhiteStripe</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/WhiteStripe"><img src="https://travis-ci.org/muschellij2/WhiteStripe.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/WhiteStripe"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/WhiteStripe?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/WhiteStripe/issues">1</a></td>
+</tr>
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/afnir">afnir</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/afnir"><img src="https://travis-ci.org/muschellij2/afnir.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/afnir"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/afnir?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/afnir/issues">0</a></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/ANTsR_norgl">ANTsR_norgl</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/ANTsR_norgl"><img src="https://travis-ci.org/muschellij2/ANTsR_norgl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/ANTsR_norgl"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ANTsR_norgl?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/ANTsR_norgl/issues">0</a></td>
-</tr>
-<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/brainR">brainR</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/brainR"><img src="https://travis-ci.org/muschellij2/brainR.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/brainR"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/brainR?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/brainR/issues">0</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/checkout">checkout</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/checkout"><img src="https://travis-ci.org/muschellij2/checkout.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/checkout"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/checkout?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/checkout/issues">0</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/cifti">cifti</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/cifti"><img src="https://travis-ci.org/muschellij2/cifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/cifti"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/cifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/cifti/issues">0</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/clusterRundown">clusterRundown</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/clusterRundown"><img src="https://travis-ci.org/muschellij2/clusterRundown.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/clusterRundown"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/clusterRundown?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/clusterRundown/issues">1</a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/ct.malf.templates">ct.malf.templates</a></td>
@@ -271,76 +297,16 @@ knitr<span class="op">::</span><span class="kw">kable</span>(mine)</code></pre><
 <td align="left"><a href="https://github.com/muschellij2/kirby21/issues">0</a></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.asl">kirby21.asl</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.asl"><img src="https://travis-ci.org/muschellij2/kirby21.asl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-asl"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.asl?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.asl/issues">0</a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21_scan_1">kirby21_scan_1</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21_scan_1"><img src="https://travis-ci.org/muschellij2/kirby21_scan_1.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scan_1"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scan_1?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21_scan_1/issues">0</a></td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.base">kirby21.base</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.base"><img src="https://travis-ci.org/muschellij2/kirby21.base.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-base"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.base?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.base/issues">0</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.det2">kirby21.det2</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.det2"><img src="https://travis-ci.org/muschellij2/kirby21.det2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-det2"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.det2?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.det2/issues">0</a></td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.dti">kirby21.dti</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.dti"><img src="https://travis-ci.org/muschellij2/kirby21.dti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-dti"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.dti?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.dti/issues">0</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.flair">kirby21.flair</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.flair"><img src="https://travis-ci.org/muschellij2/kirby21.flair.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-flair"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.flair?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.flair/issues">0</a></td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.fmri">kirby21.fmri</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.fmri"><img src="https://travis-ci.org/muschellij2/kirby21.fmri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-fmri"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.fmri?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.fmri/issues">0</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.mt">kirby21.mt</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.mt"><img src="https://travis-ci.org/muschellij2/kirby21.mt.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-mt"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.mt?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.mt/issues">0</a></td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.smri">kirby21.smri</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.smri"><img src="https://travis-ci.org/muschellij2/kirby21.smri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-smri"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.smri?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.smri/issues">0</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.survey">kirby21.survey</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.survey"><img src="https://travis-ci.org/muschellij2/kirby21.survey.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-survey"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.survey?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.survey/issues">0</a></td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.t1">kirby21.t1</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.t1"><img src="https://travis-ci.org/muschellij2/kirby21.t1.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-t1"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.t1?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.t1/issues">0</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.t2">kirby21.t2</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.t2"><img src="https://travis-ci.org/muschellij2/kirby21.t2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-t2"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.t2?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.t2/issues">0</a></td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/muschellij2/kirby21.vaso">kirby21.vaso</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.vaso"><img src="https://travis-ci.org/muschellij2/kirby21.vaso.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-vaso"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.vaso?branch=master&amp;svg=true"></embed></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21.vaso/issues">0</a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21_scan_2">kirby21_scan_2</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21_scan_2"><img src="https://travis-ci.org/muschellij2/kirby21_scan_2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scan_2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scan_2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21_scan_2/issues">0</a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scanner">kirby21_scanner</a></td>
@@ -349,16 +315,76 @@ knitr<span class="op">::</span><span class="kw">kable</span>(mine)</code></pre><
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scanner/issues">0</a></td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/muschellij2/kirby21_scan_1">kirby21_scan_1</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21_scan_1"><img src="https://travis-ci.org/muschellij2/kirby21_scan_1.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scan_1"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scan_1?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21_scan_1/issues">0</a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.asl">kirby21.asl</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.asl"><img src="https://travis-ci.org/muschellij2/kirby21.asl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-asl"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.asl?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.asl/issues">0</a></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/kirby21_scan_2">kirby21_scan_2</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21_scan_2"><img src="https://travis-ci.org/muschellij2/kirby21_scan_2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scan_2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scan_2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/kirby21_scan_2/issues">0</a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.base">kirby21.base</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.base"><img src="https://travis-ci.org/muschellij2/kirby21.base.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-base"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.base?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.base/issues">0</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.det2">kirby21.det2</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.det2"><img src="https://travis-ci.org/muschellij2/kirby21.det2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-det2"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.det2?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.det2/issues">0</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.dti">kirby21.dti</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.dti"><img src="https://travis-ci.org/muschellij2/kirby21.dti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-dti"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.dti?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.dti/issues">0</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.flair">kirby21.flair</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.flair"><img src="https://travis-ci.org/muschellij2/kirby21.flair.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-flair"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.flair?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.flair/issues">0</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.fmri">kirby21.fmri</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.fmri"><img src="https://travis-ci.org/muschellij2/kirby21.fmri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-fmri"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.fmri?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.fmri/issues">0</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.mt">kirby21.mt</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.mt"><img src="https://travis-ci.org/muschellij2/kirby21.mt.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-mt"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.mt?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.mt/issues">0</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.smri">kirby21.smri</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.smri"><img src="https://travis-ci.org/muschellij2/kirby21.smri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-smri"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.smri?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.smri/issues">0</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.survey">kirby21.survey</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.survey"><img src="https://travis-ci.org/muschellij2/kirby21.survey.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-survey"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.survey?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.survey/issues">0</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.t1">kirby21.t1</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.t1"><img src="https://travis-ci.org/muschellij2/kirby21.t1.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-t1"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.t1?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.t1/issues">0</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.t2">kirby21.t2</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.t2"><img src="https://travis-ci.org/muschellij2/kirby21.t2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-t2"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.t2?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.t2/issues">0</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/kirby21.vaso">kirby21.vaso</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.vaso"><img src="https://travis-ci.org/muschellij2/kirby21.vaso.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-vaso"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21.vaso?branch=master&amp;svg=true"></embed></a></td>
+<td align="left"><a href="https://github.com/muschellij2/kirby21.vaso/issues">0</a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/latexreadme">latexreadme</a></td>
@@ -421,88 +447,64 @@ knitr<span class="op">::</span><span class="kw">kable</span>(mine)</code></pre><
 <td align="left"><a href="https://github.com/muschellij2/neuroc.deps/issues">0</a></td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/muschellij2/neurocInstall">neurocInstall</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/neurocInstall"><img src="https://travis-ci.org/muschellij2/neurocInstall.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/neurocInstall"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurocInstall?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/neurocInstall/issues">1</a></td>
-</tr>
-<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/neurohcp">neurohcp</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/neurohcp"><img src="https://travis-ci.org/muschellij2/neurohcp.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/neurohcp"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurohcp?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/neurohcp/issues">0</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/neurometrics">neurometrics</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/neurometrics"><img src="https://travis-ci.org/muschellij2/neurometrics.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/neurometrics"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurometrics?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/neurometrics/issues">0</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/nitrc">nitrc</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/nitrc"><img src="https://travis-ci.org/muschellij2/nitrc.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/nitrc"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/nitrc?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/nitrc/issues">0</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/oro.nifti">oro.nifti</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/oro.nifti"><img src="https://travis-ci.org/muschellij2/oro.nifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/oro-nifti"><embed src="https://ci.appveyor.com/api/projects/status/github/muschellij2/oro.nifti?branch=master&amp;svg=true"></embed></a></td>
 <td align="left"><a href="https://github.com/muschellij2/oro.nifti/issues">0</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/oslerInstall">oslerInstall</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/oslerInstall"><img src="https://travis-ci.org/muschellij2/oslerInstall.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/oslerInstall"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/oslerInstall?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/oslerInstall/issues">0</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/papayar">papayar</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/papayar"><img src="https://travis-ci.org/muschellij2/papayar.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/papayar"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/papayar?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/papayar/issues">0</a></td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/papayaWidget">papayaWidget</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/papayaWidget"><img src="https://travis-ci.org/muschellij2/papayaWidget.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/papayaWidget"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/papayaWidget?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/papayaWidget/issues">1</a></td>
-</tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/muschellij2/processVISION">processVISION</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/processVISION"><img src="https://travis-ci.org/muschellij2/processVISION.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/processVISION"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/processVISION?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/processVISION/issues">1</a></td>
-</tr>
-<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/rcamino">rcamino</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/rcamino"><img src="https://travis-ci.org/muschellij2/rcamino.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/rcamino"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/rcamino?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/rcamino/issues">0</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/rdcm2niix">rdcm2niix</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/rdcm2niix"><img src="https://travis-ci.org/muschellij2/rdcm2niix.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/rdcm2niix"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/rdcm2niix?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/rdcm2niix/issues">0</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/rscopus">rscopus</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/rscopus"><img src="https://travis-ci.org/muschellij2/rscopus.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/rscopus"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/rscopus?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/rscopus/issues">0</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/smallpdf">smallpdf</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/smallpdf"><img src="https://travis-ci.org/muschellij2/smallpdf.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/smallpdf"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/smallpdf?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/smallpdf/issues">0</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/spm12r">spm12r</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/spm12r"><img src="https://travis-ci.org/muschellij2/spm12r.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/spm12r"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/spm12r?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/spm12r/issues">1</a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/ssgraph">ssgraph</a></td>
@@ -521,12 +523,6 @@ knitr<span class="op">::</span><span class="kw">kable</span>(mine)</code></pre><
 <td align="left"><a href="https://travis-ci.org/muschellij2/travisrgl"><img src="https://travis-ci.org/muschellij2/travisrgl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/travisrgl"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/travisrgl?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/travisrgl/issues">0</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/WhiteStripe">WhiteStripe</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/WhiteStripe"><img src="https://travis-ci.org/muschellij2/WhiteStripe.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/WhiteStripe"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/WhiteStripe?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/WhiteStripe/issues">1</a></td>
 </tr>
 </tbody>
 </table>
