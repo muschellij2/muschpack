@@ -47,7 +47,7 @@ mine = mine %>%
 mine = mine %>% 
   mutate(
     vignettes = ifelse(vignettes, "Yes", ""),
-    tests = ifelse(tests, "<Icon name='checkmark' color='green' size='medium'/>", ""))
+    tests = ifelse(tests, "<Icon name='checkmark'/>", ""))
 
 colnames(mine) = c("GitHub Link", "Travis Status", 
                    "Appveyor Status", "Number of Issues",
