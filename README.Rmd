@@ -52,5 +52,5 @@ mine = mine %>%
 colnames(mine) = c("GitHub Link", "Travis Status", 
                    "Appveyor Status", "Number of Issues",
                    "Vignettes Folder", "Tests Folder")
-knitr::kable(mine, escape = FALSE)
+knitr::kable(mine)
 ```
