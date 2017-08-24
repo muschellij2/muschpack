@@ -74,7 +74,8 @@ r_package_repos = function(username = "muschellij2", ...) {
   df$appveyor_badge = paste0(
     "[![AppVeyor Build Status](",
     "https://ci.appveyor.com/api/projects/status/github/",
-    df$remote, "?branch=master&svg=true)](",
+    gsub("[.]", "-", df$remote),
+    "?branch=master&svg=true)](",
     df$appveyor, ")")
   return(df)
 }
