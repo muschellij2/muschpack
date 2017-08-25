@@ -2,6 +2,8 @@
 output: github_document
 ---
 
+<script src="https://use.fontawesome.com/8934e08f5b.js"></script>
+
 [![Travis-CI Build Status](https://travis-ci.org/muschellij2/muschpack.svg?branch=master)](https://travis-ci.org/muschellij2/muschpack)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/muschpack?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/muschpack)
 
@@ -34,7 +36,7 @@ devtools::install_github("muschellij2/muschpack")
 ```{r example}
 library(muschpack)
 library(dplyr)
-df = r_package_repos(username = "neuroconductor-devel")
+df = r_package_repos(username = "muschellij2")
 mine = df %>% filter(!fork & r_repo)
 mine = mine %>% 
   filter(!grepl("^test", bare)) %>% 
