@@ -34,7 +34,7 @@ devtools::install_github("muschellij2/muschpack")
 ```{r example}
 library(muschpack)
 library(dplyr)
-df = r_package_repos(username = "muschellij2")
+df = r_package_repos(username = "neuroconductor-devel")
 mine = df %>% filter(!fork & r_repo)
 mine = mine %>% 
   filter(!grepl("^test", bare)) %>% 
@@ -44,10 +44,13 @@ mine$issues_page = paste0("[", mine$open_issues_count, "](",
 mine = mine %>% 
   select(gh_link, travis_badge, 
          appveyor_badge, issues_page, vignettes, tests)
+make_yes = function(x){
+  ifelse(x, '<i class="fa fa-check"></i>', '')
+}
 mine = mine %>% 
   mutate(
-    vignettes = ifelse(vignettes, "Yes", ""),
-    tests = ifelse(tests, "<Icon name='checkmark'/>", ""))
+    vignettes = make_yes(vignettes),
+    tests = make_yes(tests))
 
 colnames(mine) = c("GitHub Link", "Travis Status", 
                    "Appveyor Status", "Number of Issues",
