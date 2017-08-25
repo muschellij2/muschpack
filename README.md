@@ -21,6 +21,8 @@ devtools::install_github("muschellij2/muschpack")
 Package Check Report
 ====================
 
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+
 ``` r
 library(muschpack)
 library(dplyr)
