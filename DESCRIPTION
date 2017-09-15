@@ -1,13 +1,14 @@
 Package: muschpack
 Type: Package
 Title: Build Status of All John 'Muschelli' Packages
-Version: 0.4
+Version: 0.5
 Authors@R: person(given = "John",
            family = "Muschelli",
            role = "cre",
            email = "muschellij2@gmail.com")
 Maintainer: John Muschelli <muschellij2@gmail.com>
-Description: Provides a build status for all John 'Muschelli' 'GitHub' packages.
+Description: Provides a build status for all John 'Muschelli'
+    'GitHub' packages.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
