@@ -21,7 +21,7 @@ Suggests: knitr,
     rmarkdown,
     testthat
 VignetteBuilder: knitr
-Remotes: r-lib/gh
+Remotes: r-lib/gh, r-lib/usethis
 RoxygenNote: 6.0.1.9000
 URL: https://github.com/muschellij2/muschpack
 BugReports: https://github.com/muschellij2/muschpack/issues

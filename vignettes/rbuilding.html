@@ -12,7 +12,7 @@
 
 <meta name="author" content="Vignette Author" />
 
-<meta name="date" content="2017-08-11" />
+<meta name="date" content="2017-09-15" />
 
 <title>Building R Packages</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Building R Packages</h1>
 <h4 class="author"><em>Vignette Author</em></h4>
-<h4 class="date"><em>2017-08-11</em></h4>
+<h4 class="date"><em>2017-09-15</em></h4>
 
 
 
@@ -118,13 +118,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="building-ci-and-readme" class="section level1">
 <h1>Building CI and README</h1>
 <p>I run the short version of the code on <a href="http://johnmuschelli.com/neuroc/getting_ready_for_submission/index.html" class="uri">http://johnmuschelli.com/neuroc/getting_ready_for_submission/index.html</a>, which essentially to run (in R):</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">use_git</span>()
-devtools<span class="op">::</span><span class="kw">use_github</span>() <span class="co"># must have GITHUB_PAT set up</span>
-devtools<span class="op">::</span><span class="kw">use_readme_md</span>()
-devtools<span class="op">::</span><span class="kw">use_vignette</span>(<span class="st">&quot;my-vignette&quot;</span>)
-devtools<span class="op">::</span><span class="kw">use_testthat</span>()
-devtools<span class="op">::</span><span class="kw">use_appveyor</span>()
-devtools<span class="op">::</span><span class="kw">use_travis</span>()</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">usethis<span class="op">::</span><span class="kw">use_git</span>()
+usethis<span class="op">::</span><span class="kw">use_github</span>() <span class="co"># must have GITHUB_PAT set up</span>
+usethis<span class="op">::</span><span class="kw">use_readme_md</span>()
+usethis<span class="op">::</span><span class="kw">use_vignette</span>(<span class="st">&quot;my-vignette&quot;</span>)
+usethis<span class="op">::</span><span class="kw">use_testthat</span>()
+usethis<span class="op">::</span><span class="kw">use_appveyor</span>()
+usethis<span class="op">::</span><span class="kw">use_travis</span>()</code></pre></div>
 <p>And edit the following files:</p>
 <div id="travis.yml" class="section level2">
 <h2><code>.travis.yml</code></h2>
@@ -139,7 +139,7 @@ after_success:
 <p>Add the following lines:</p>
 <pre><code>environment:
   global:
-    WARNINGS_ARE_ERORRS: 1</code></pre>
+    WARNINGS_ARE_ERRORS: 1</code></pre>
 <p>to <code>appveyor.yml</code>.</p>
 </div>
 <div id="readme.md" class="section level2">

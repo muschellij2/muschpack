@@ -23,14 +23,17 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
@@ -49,10 +52,25 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
 </li>
 <li>
-  <a href="../articles/index.html">Articles</a>
+  <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/rbuilding.html">Building R Packages</a>
+    </li>
+  </ul>
 </li>
       </ul>
       
@@ -81,17 +99,20 @@
     <p>Retrieves Github Repository Contents/filenames</p>
     
 
-    <pre><span class='fu'>repo_contents</span>(<span class='no'>repo</span>)
+    <pre class="usage"><span class='fu'>repo_contents</span>(<span class='no'>repo</span>)
 
 <span class='fu'>repo_files</span>(<span class='no'>repo</span>)
 
 <span class='fu'>has_remote_dcf</span>(<span class='no'>repo</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
-    <dl class="dl-horizontal">
-      <dt>repo</dt>
-      <dd>Github repository in the order or user/repo</dd>
-    </dl>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>repo</th>
+      <td><p>Github repository in the order or user/repo</p></td>
+    </tr>
+    </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
@@ -101,435 +122,435 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>repo_contents</span>(<span class='st'>"muschellij2/fslr"</span>)</div><div class='output co'>#&gt; [
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;.Rbuildignore&quot;,
-#&gt;     &quot;path&quot;: &quot;.Rbuildignore&quot;,
-#&gt;     &quot;sha&quot;: &quot;a93e5e8ef4a6964e5acc374b7fd80f8d2ec80b66&quot;,
-#&gt;     &quot;size&quot;: 502,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/.Rbuildignore?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/.Rbuildignore&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/a93e5e8ef4a6964e5acc374b7fd80f8d2ec80b66&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/.Rbuildignore&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/.Rbuildignore?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/a93e5e8ef4a6964e5acc374b7fd80f8d2ec80b66&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/.Rbuildignore&quot;
+#&gt;     "name": ".Rbuildignore",
+#&gt;     "path": ".Rbuildignore",
+#&gt;     "sha": "a93e5e8ef4a6964e5acc374b7fd80f8d2ec80b66",
+#&gt;     "size": 502,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/.Rbuildignore?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/.Rbuildignore",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/a93e5e8ef4a6964e5acc374b7fd80f8d2ec80b66",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/.Rbuildignore",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/.Rbuildignore?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/a93e5e8ef4a6964e5acc374b7fd80f8d2ec80b66",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/.Rbuildignore"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;.gitignore&quot;,
-#&gt;     &quot;path&quot;: &quot;.gitignore&quot;,
-#&gt;     &quot;sha&quot;: &quot;02f480eb120b31a4168423295adac8a340f62436&quot;,
-#&gt;     &quot;size&quot;: 183,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/.gitignore?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/.gitignore&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/02f480eb120b31a4168423295adac8a340f62436&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/.gitignore&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/.gitignore?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/02f480eb120b31a4168423295adac8a340f62436&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/.gitignore&quot;
+#&gt;     "name": ".gitignore",
+#&gt;     "path": ".gitignore",
+#&gt;     "sha": "02f480eb120b31a4168423295adac8a340f62436",
+#&gt;     "size": 183,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/.gitignore?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/.gitignore",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/02f480eb120b31a4168423295adac8a340f62436",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/.gitignore",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/.gitignore?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/02f480eb120b31a4168423295adac8a340f62436",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/.gitignore"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;.lintr&quot;,
-#&gt;     &quot;path&quot;: &quot;.lintr&quot;,
-#&gt;     &quot;sha&quot;: &quot;af3e5bb18d8acb6a78c2567b8e52243502e572b5&quot;,
-#&gt;     &quot;size&quot;: 74,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/.lintr?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/.lintr&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/af3e5bb18d8acb6a78c2567b8e52243502e572b5&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/.lintr&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/.lintr?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/af3e5bb18d8acb6a78c2567b8e52243502e572b5&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/.lintr&quot;
+#&gt;     "name": ".lintr",
+#&gt;     "path": ".lintr",
+#&gt;     "sha": "af3e5bb18d8acb6a78c2567b8e52243502e572b5",
+#&gt;     "size": 74,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/.lintr?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/.lintr",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/af3e5bb18d8acb6a78c2567b8e52243502e572b5",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/.lintr",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/.lintr?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/af3e5bb18d8acb6a78c2567b8e52243502e572b5",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/.lintr"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;.travis.yml&quot;,
-#&gt;     &quot;path&quot;: &quot;.travis.yml&quot;,
-#&gt;     &quot;sha&quot;: &quot;de5e30a85177e0ac58f6fdee98cba5da96b61c10&quot;,
-#&gt;     &quot;size&quot;: 660,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/.travis.yml?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/.travis.yml&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/de5e30a85177e0ac58f6fdee98cba5da96b61c10&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/.travis.yml&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/.travis.yml?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/de5e30a85177e0ac58f6fdee98cba5da96b61c10&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/.travis.yml&quot;
+#&gt;     "name": ".travis.yml",
+#&gt;     "path": ".travis.yml",
+#&gt;     "sha": "de5e30a85177e0ac58f6fdee98cba5da96b61c10",
+#&gt;     "size": 660,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/.travis.yml?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/.travis.yml",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/de5e30a85177e0ac58f6fdee98cba5da96b61c10",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/.travis.yml",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/.travis.yml?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/de5e30a85177e0ac58f6fdee98cba5da96b61c10",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/.travis.yml"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;Archive.zip&quot;,
-#&gt;     &quot;path&quot;: &quot;Archive.zip&quot;,
-#&gt;     &quot;sha&quot;: &quot;6606812f450b6a48f4d600329547aee74566c220&quot;,
-#&gt;     &quot;size&quot;: 2681,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/Archive.zip?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/Archive.zip&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/6606812f450b6a48f4d600329547aee74566c220&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/Archive.zip&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/Archive.zip?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/6606812f450b6a48f4d600329547aee74566c220&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/Archive.zip&quot;
+#&gt;     "name": "Archive.zip",
+#&gt;     "path": "Archive.zip",
+#&gt;     "sha": "6606812f450b6a48f4d600329547aee74566c220",
+#&gt;     "size": 2681,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/Archive.zip?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/Archive.zip",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/6606812f450b6a48f4d600329547aee74566c220",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/Archive.zip",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/Archive.zip?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/6606812f450b6a48f4d600329547aee74566c220",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/Archive.zip"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;DESCRIPTION&quot;,
-#&gt;     &quot;path&quot;: &quot;DESCRIPTION&quot;,
-#&gt;     &quot;sha&quot;: &quot;7983734d67dba3c7b21e7dac2929fb8b06df5b41&quot;,
-#&gt;     &quot;size&quot;: 1169,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/DESCRIPTION?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/DESCRIPTION&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/7983734d67dba3c7b21e7dac2929fb8b06df5b41&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/DESCRIPTION&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/DESCRIPTION?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/7983734d67dba3c7b21e7dac2929fb8b06df5b41&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/DESCRIPTION&quot;
+#&gt;     "name": "DESCRIPTION",
+#&gt;     "path": "DESCRIPTION",
+#&gt;     "sha": "7983734d67dba3c7b21e7dac2929fb8b06df5b41",
+#&gt;     "size": 1169,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/DESCRIPTION?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/DESCRIPTION",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/7983734d67dba3c7b21e7dac2929fb8b06df5b41",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/DESCRIPTION",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/DESCRIPTION?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/7983734d67dba3c7b21e7dac2929fb8b06df5b41",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/DESCRIPTION"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;NAMESPACE&quot;,
-#&gt;     &quot;path&quot;: &quot;NAMESPACE&quot;,
-#&gt;     &quot;sha&quot;: &quot;01f66fe4721896eb9193c8c5b5ba948f9c64613b&quot;,
-#&gt;     &quot;size&quot;: 4848,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/NAMESPACE?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/NAMESPACE&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/01f66fe4721896eb9193c8c5b5ba948f9c64613b&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/NAMESPACE&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/NAMESPACE?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/01f66fe4721896eb9193c8c5b5ba948f9c64613b&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/NAMESPACE&quot;
+#&gt;     "name": "NAMESPACE",
+#&gt;     "path": "NAMESPACE",
+#&gt;     "sha": "01f66fe4721896eb9193c8c5b5ba948f9c64613b",
+#&gt;     "size": 4848,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/NAMESPACE?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/NAMESPACE",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/01f66fe4721896eb9193c8c5b5ba948f9c64613b",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/NAMESPACE",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/NAMESPACE?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/01f66fe4721896eb9193c8c5b5ba948f9c64613b",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/NAMESPACE"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;NEWS.md&quot;,
-#&gt;     &quot;path&quot;: &quot;NEWS.md&quot;,
-#&gt;     &quot;sha&quot;: &quot;da06585667c968ad0f090b761d8920de9ce3a260&quot;,
-#&gt;     &quot;size&quot;: 503,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/NEWS.md?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/NEWS.md&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/da06585667c968ad0f090b761d8920de9ce3a260&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/NEWS.md&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/NEWS.md?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/da06585667c968ad0f090b761d8920de9ce3a260&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/NEWS.md&quot;
+#&gt;     "name": "NEWS.md",
+#&gt;     "path": "NEWS.md",
+#&gt;     "sha": "da06585667c968ad0f090b761d8920de9ce3a260",
+#&gt;     "size": 503,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/NEWS.md?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/NEWS.md",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/da06585667c968ad0f090b761d8920de9ce3a260",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/NEWS.md",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/NEWS.md?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/da06585667c968ad0f090b761d8920de9ce3a260",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/NEWS.md"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;R&quot;,
-#&gt;     &quot;path&quot;: &quot;R&quot;,
-#&gt;     &quot;sha&quot;: &quot;45bf228607a1b99f2df43aa8edffe7230e534c17&quot;,
-#&gt;     &quot;size&quot;: 0,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/45bf228607a1b99f2df43aa8edffe7230e534c17&quot;,
-#&gt;     &quot;download_url&quot;: {},
-#&gt;     &quot;type&quot;: &quot;dir&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/45bf228607a1b99f2df43aa8edffe7230e534c17&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/R&quot;
+#&gt;     "name": "R",
+#&gt;     "path": "R",
+#&gt;     "sha": "45bf228607a1b99f2df43aa8edffe7230e534c17",
+#&gt;     "size": 0,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/tree/master/R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/45bf228607a1b99f2df43aa8edffe7230e534c17",
+#&gt;     "download_url": {},
+#&gt;     "type": "dir",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/45bf228607a1b99f2df43aa8edffe7230e534c17",
+#&gt;       "html": "https://github.com/muschellij2/fslr/tree/master/R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;README.md&quot;,
-#&gt;     &quot;path&quot;: &quot;README.md&quot;,
-#&gt;     &quot;sha&quot;: &quot;ca3f78df5b0f004159a660f3c21f1b8799e2e082&quot;,
-#&gt;     &quot;size&quot;: 1060,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/README.md?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/README.md&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/ca3f78df5b0f004159a660f3c21f1b8799e2e082&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/README.md&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/README.md?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/ca3f78df5b0f004159a660f3c21f1b8799e2e082&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/README.md&quot;
+#&gt;     "name": "README.md",
+#&gt;     "path": "README.md",
+#&gt;     "sha": "ca3f78df5b0f004159a660f3c21f1b8799e2e082",
+#&gt;     "size": 1060,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/README.md?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/README.md",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/ca3f78df5b0f004159a660f3c21f1b8799e2e082",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/README.md",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/README.md?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/ca3f78df5b0f004159a660f3c21f1b8799e2e082",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/README.md"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;appveyor.yml&quot;,
-#&gt;     &quot;path&quot;: &quot;appveyor.yml&quot;,
-#&gt;     &quot;sha&quot;: &quot;e32d316cc872281a27939d95db4b5943c795ab4e&quot;,
-#&gt;     &quot;size&quot;: 836,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/appveyor.yml?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/appveyor.yml&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/e32d316cc872281a27939d95db4b5943c795ab4e&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/appveyor.yml&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/appveyor.yml?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/e32d316cc872281a27939d95db4b5943c795ab4e&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/appveyor.yml&quot;
+#&gt;     "name": "appveyor.yml",
+#&gt;     "path": "appveyor.yml",
+#&gt;     "sha": "e32d316cc872281a27939d95db4b5943c795ab4e",
+#&gt;     "size": 836,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/appveyor.yml?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/appveyor.yml",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/e32d316cc872281a27939d95db4b5943c795ab4e",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/appveyor.yml",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/appveyor.yml?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/e32d316cc872281a27939d95db4b5943c795ab4e",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/appveyor.yml"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;docs&quot;,
-#&gt;     &quot;path&quot;: &quot;docs&quot;,
-#&gt;     &quot;sha&quot;: &quot;b5e0fca708bc945d9184a15385a84b21cd6e2a22&quot;,
-#&gt;     &quot;size&quot;: 0,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/docs?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/docs&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/b5e0fca708bc945d9184a15385a84b21cd6e2a22&quot;,
-#&gt;     &quot;download_url&quot;: {},
-#&gt;     &quot;type&quot;: &quot;dir&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/docs?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/b5e0fca708bc945d9184a15385a84b21cd6e2a22&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/docs&quot;
+#&gt;     "name": "docs",
+#&gt;     "path": "docs",
+#&gt;     "sha": "b5e0fca708bc945d9184a15385a84b21cd6e2a22",
+#&gt;     "size": 0,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/docs?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/tree/master/docs",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/b5e0fca708bc945d9184a15385a84b21cd6e2a22",
+#&gt;     "download_url": {},
+#&gt;     "type": "dir",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/docs?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/b5e0fca708bc945d9184a15385a84b21cd6e2a22",
+#&gt;       "html": "https://github.com/muschellij2/fslr/tree/master/docs"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr.Rproj&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr.Rproj&quot;,
-#&gt;     &quot;sha&quot;: &quot;58747babf5089bcd969bac4ace011b6ea18ba76f&quot;,
-#&gt;     &quot;size&quot;: 422,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr.Rproj?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr.Rproj&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/58747babf5089bcd969bac4ace011b6ea18ba76f&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr.Rproj&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr.Rproj?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/58747babf5089bcd969bac4ace011b6ea18ba76f&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr.Rproj&quot;
+#&gt;     "name": "fslr.Rproj",
+#&gt;     "path": "fslr.Rproj",
+#&gt;     "sha": "58747babf5089bcd969bac4ace011b6ea18ba76f",
+#&gt;     "size": 422,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr.Rproj?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr.Rproj",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/58747babf5089bcd969bac4ace011b6ea18ba76f",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr.Rproj",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr.Rproj?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/58747babf5089bcd969bac4ace011b6ea18ba76f",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr.Rproj"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_Generic_Function.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_Generic_Function.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;ce241e421517588318f8b0f072938a451b9c9223&quot;,
-#&gt;     &quot;size&quot;: 492,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_Function.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_Function.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/ce241e421517588318f8b0f072938a451b9c9223&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_Function.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_Function.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/ce241e421517588318f8b0f072938a451b9c9223&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_Function.R&quot;
+#&gt;     "name": "fslr_Generic_Function.R",
+#&gt;     "path": "fslr_Generic_Function.R",
+#&gt;     "sha": "ce241e421517588318f8b0f072938a451b9c9223",
+#&gt;     "size": 492,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_Function.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_Function.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/ce241e421517588318f8b0f072938a451b9c9223",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_Function.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_Function.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/ce241e421517588318f8b0f072938a451b9c9223",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_Function.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_Generic_Maker.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_Generic_Maker.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;895fc1fe72ca8066111c05762e560871405feac5&quot;,
-#&gt;     &quot;size&quot;: 3107,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_Maker.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_Maker.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/895fc1fe72ca8066111c05762e560871405feac5&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_Maker.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_Maker.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/895fc1fe72ca8066111c05762e560871405feac5&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_Maker.R&quot;
+#&gt;     "name": "fslr_Generic_Maker.R",
+#&gt;     "path": "fslr_Generic_Maker.R",
+#&gt;     "sha": "895fc1fe72ca8066111c05762e560871405feac5",
+#&gt;     "size": 3107,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_Maker.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_Maker.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/895fc1fe72ca8066111c05762e560871405feac5",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_Maker.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_Maker.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/895fc1fe72ca8066111c05762e560871405feac5",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_Maker.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_Generic_fslmaths.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_Generic_fslmaths.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;c4934527871b96c8feae9ceaebbfeff97766ae23&quot;,
-#&gt;     &quot;size&quot;: 1259,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/c4934527871b96c8feae9ceaebbfeff97766ae23&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslmaths.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/c4934527871b96c8feae9ceaebbfeff97766ae23&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths.R&quot;
+#&gt;     "name": "fslr_Generic_fslmaths.R",
+#&gt;     "path": "fslr_Generic_fslmaths.R",
+#&gt;     "sha": "c4934527871b96c8feae9ceaebbfeff97766ae23",
+#&gt;     "size": 1259,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/c4934527871b96c8feae9ceaebbfeff97766ae23",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslmaths.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/c4934527871b96c8feae9ceaebbfeff97766ae23",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_Generic_fslmaths_Maker.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_Generic_fslmaths_Maker.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;bae6bf5334116375e4f88fbdcfb2bef013c770de&quot;,
-#&gt;     &quot;size&quot;: 5630,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths_Maker.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths_Maker.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/bae6bf5334116375e4f88fbdcfb2bef013c770de&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslmaths_Maker.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths_Maker.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/bae6bf5334116375e4f88fbdcfb2bef013c770de&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths_Maker.R&quot;
+#&gt;     "name": "fslr_Generic_fslmaths_Maker.R",
+#&gt;     "path": "fslr_Generic_fslmaths_Maker.R",
+#&gt;     "sha": "bae6bf5334116375e4f88fbdcfb2bef013c770de",
+#&gt;     "size": 5630,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths_Maker.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths_Maker.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/bae6bf5334116375e4f88fbdcfb2bef013c770de",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslmaths_Maker.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths_Maker.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/bae6bf5334116375e4f88fbdcfb2bef013c770de",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths_Maker.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_Generic_fslmaths_onefile.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_Generic_fslmaths_onefile.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;41e3b2b097bc9f04656549f649e541761033b55e&quot;,
-#&gt;     &quot;size&quot;: 1149,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths_onefile.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths_onefile.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/41e3b2b097bc9f04656549f649e541761033b55e&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslmaths_onefile.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths_onefile.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/41e3b2b097bc9f04656549f649e541761033b55e&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths_onefile.R&quot;
+#&gt;     "name": "fslr_Generic_fslmaths_onefile.R",
+#&gt;     "path": "fslr_Generic_fslmaths_onefile.R",
+#&gt;     "sha": "41e3b2b097bc9f04656549f649e541761033b55e",
+#&gt;     "size": 1149,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths_onefile.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths_onefile.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/41e3b2b097bc9f04656549f649e541761033b55e",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslmaths_onefile.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslmaths_onefile.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/41e3b2b097bc9f04656549f649e541761033b55e",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslmaths_onefile.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_Generic_fslstats.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_Generic_fslstats.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;3440ab28aeef706d8d77e23bb66434ea25c893d3&quot;,
-#&gt;     &quot;size&quot;: 739,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/3440ab28aeef706d8d77e23bb66434ea25c893d3&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslstats.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/3440ab28aeef706d8d77e23bb66434ea25c893d3&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats.R&quot;
+#&gt;     "name": "fslr_Generic_fslstats.R",
+#&gt;     "path": "fslr_Generic_fslstats.R",
+#&gt;     "sha": "3440ab28aeef706d8d77e23bb66434ea25c893d3",
+#&gt;     "size": 739,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/3440ab28aeef706d8d77e23bb66434ea25c893d3",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslstats.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/3440ab28aeef706d8d77e23bb66434ea25c893d3",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_Generic_fslstats_Maker.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_Generic_fslstats_Maker.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;6b624bfe0544a258d0398dff1c967a46b43033e7&quot;,
-#&gt;     &quot;size&quot;: 1769,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats_Maker.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats_Maker.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/6b624bfe0544a258d0398dff1c967a46b43033e7&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslstats_Maker.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats_Maker.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/6b624bfe0544a258d0398dff1c967a46b43033e7&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats_Maker.R&quot;
+#&gt;     "name": "fslr_Generic_fslstats_Maker.R",
+#&gt;     "path": "fslr_Generic_fslstats_Maker.R",
+#&gt;     "sha": "6b624bfe0544a258d0398dff1c967a46b43033e7",
+#&gt;     "size": 1769,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats_Maker.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats_Maker.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/6b624bfe0544a258d0398dff1c967a46b43033e7",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslstats_Maker.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats_Maker.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/6b624bfe0544a258d0398dff1c967a46b43033e7",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats_Maker.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_Generic_fslstats_nonzero.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_Generic_fslstats_nonzero.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;72999e64eb25798ce7395cb1480ac794f4e6f5b7&quot;,
-#&gt;     &quot;size&quot;: 838,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats_nonzero.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats_nonzero.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/72999e64eb25798ce7395cb1480ac794f4e6f5b7&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslstats_nonzero.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats_nonzero.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/72999e64eb25798ce7395cb1480ac794f4e6f5b7&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats_nonzero.R&quot;
+#&gt;     "name": "fslr_Generic_fslstats_nonzero.R",
+#&gt;     "path": "fslr_Generic_fslstats_nonzero.R",
+#&gt;     "sha": "72999e64eb25798ce7395cb1480ac794f4e6f5b7",
+#&gt;     "size": 838,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats_nonzero.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats_nonzero.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/72999e64eb25798ce7395cb1480ac794f4e6f5b7",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_Generic_fslstats_nonzero.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_Generic_fslstats_nonzero.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/72999e64eb25798ce7395cb1480ac794f4e6f5b7",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_Generic_fslstats_nonzero.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_maths_helpfile.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_maths_helpfile.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;e33b38149a1a86f64f7cb6421e52eccebbbbc045&quot;,
-#&gt;     &quot;size&quot;: 385,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_maths_helpfile.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_maths_helpfile.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/e33b38149a1a86f64f7cb6421e52eccebbbbc045&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_maths_helpfile.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_maths_helpfile.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/e33b38149a1a86f64f7cb6421e52eccebbbbc045&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_maths_helpfile.R&quot;
+#&gt;     "name": "fslr_maths_helpfile.R",
+#&gt;     "path": "fslr_maths_helpfile.R",
+#&gt;     "sha": "e33b38149a1a86f64f7cb6421e52eccebbbbc045",
+#&gt;     "size": 385,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_maths_helpfile.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_maths_helpfile.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/e33b38149a1a86f64f7cb6421e52eccebbbbc045",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_maths_helpfile.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_maths_helpfile.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/e33b38149a1a86f64f7cb6421e52eccebbbbc045",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_maths_helpfile.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_underscore_functions.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_underscore_functions.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;491d05fd2768f9d399dddc7af2f1f266adc2dd84&quot;,
-#&gt;     &quot;size&quot;: 360,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_underscore_functions.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_underscore_functions.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/491d05fd2768f9d399dddc7af2f1f266adc2dd84&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_underscore_functions.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_underscore_functions.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/491d05fd2768f9d399dddc7af2f1f266adc2dd84&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_underscore_functions.R&quot;
+#&gt;     "name": "fslr_underscore_functions.R",
+#&gt;     "path": "fslr_underscore_functions.R",
+#&gt;     "sha": "491d05fd2768f9d399dddc7af2f1f266adc2dd84",
+#&gt;     "size": 360,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_underscore_functions.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_underscore_functions.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/491d05fd2768f9d399dddc7af2f1f266adc2dd84",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_underscore_functions.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_underscore_functions.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/491d05fd2768f9d399dddc7af2f1f266adc2dd84",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_underscore_functions.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;fslr_underscore_functions_maker.R&quot;,
-#&gt;     &quot;path&quot;: &quot;fslr_underscore_functions_maker.R&quot;,
-#&gt;     &quot;sha&quot;: &quot;e1a95e9a6ae5eacef6e9a5a61842922147b212ef&quot;,
-#&gt;     &quot;size&quot;: 3376,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_underscore_functions_maker.R?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_underscore_functions_maker.R&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/e1a95e9a6ae5eacef6e9a5a61842922147b212ef&quot;,
-#&gt;     &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_underscore_functions_maker.R&quot;,
-#&gt;     &quot;type&quot;: &quot;file&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/fslr_underscore_functions_maker.R?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/blobs/e1a95e9a6ae5eacef6e9a5a61842922147b212ef&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/blob/master/fslr_underscore_functions_maker.R&quot;
+#&gt;     "name": "fslr_underscore_functions_maker.R",
+#&gt;     "path": "fslr_underscore_functions_maker.R",
+#&gt;     "sha": "e1a95e9a6ae5eacef6e9a5a61842922147b212ef",
+#&gt;     "size": 3376,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_underscore_functions_maker.R?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr_underscore_functions_maker.R",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/e1a95e9a6ae5eacef6e9a5a61842922147b212ef",
+#&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr_underscore_functions_maker.R",
+#&gt;     "type": "file",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr_underscore_functions_maker.R?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/e1a95e9a6ae5eacef6e9a5a61842922147b212ef",
+#&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr_underscore_functions_maker.R"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;inst&quot;,
-#&gt;     &quot;path&quot;: &quot;inst&quot;,
-#&gt;     &quot;sha&quot;: &quot;23b963c329c16b3d07840e7acceee0f6430bcd12&quot;,
-#&gt;     &quot;size&quot;: 0,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/inst?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/inst&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/23b963c329c16b3d07840e7acceee0f6430bcd12&quot;,
-#&gt;     &quot;download_url&quot;: {},
-#&gt;     &quot;type&quot;: &quot;dir&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/inst?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/23b963c329c16b3d07840e7acceee0f6430bcd12&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/inst&quot;
+#&gt;     "name": "inst",
+#&gt;     "path": "inst",
+#&gt;     "sha": "23b963c329c16b3d07840e7acceee0f6430bcd12",
+#&gt;     "size": 0,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/inst?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/tree/master/inst",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/23b963c329c16b3d07840e7acceee0f6430bcd12",
+#&gt;     "download_url": {},
+#&gt;     "type": "dir",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/inst?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/23b963c329c16b3d07840e7acceee0f6430bcd12",
+#&gt;       "html": "https://github.com/muschellij2/fslr/tree/master/inst"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;man&quot;,
-#&gt;     &quot;path&quot;: &quot;man&quot;,
-#&gt;     &quot;sha&quot;: &quot;be0bf7f97ddee043b4fa3c5878d835ba8f6b92a9&quot;,
-#&gt;     &quot;size&quot;: 0,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/man?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/man&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/be0bf7f97ddee043b4fa3c5878d835ba8f6b92a9&quot;,
-#&gt;     &quot;download_url&quot;: {},
-#&gt;     &quot;type&quot;: &quot;dir&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/man?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/be0bf7f97ddee043b4fa3c5878d835ba8f6b92a9&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/man&quot;
+#&gt;     "name": "man",
+#&gt;     "path": "man",
+#&gt;     "sha": "be0bf7f97ddee043b4fa3c5878d835ba8f6b92a9",
+#&gt;     "size": 0,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/man?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/tree/master/man",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/be0bf7f97ddee043b4fa3c5878d835ba8f6b92a9",
+#&gt;     "download_url": {},
+#&gt;     "type": "dir",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/man?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/be0bf7f97ddee043b4fa3c5878d835ba8f6b92a9",
+#&gt;       "html": "https://github.com/muschellij2/fslr/tree/master/man"
 #&gt;     }
 #&gt;   },
 #&gt;   {
-#&gt;     &quot;name&quot;: &quot;vignettes&quot;,
-#&gt;     &quot;path&quot;: &quot;vignettes&quot;,
-#&gt;     &quot;sha&quot;: &quot;96b146dbc7e85dfbba49540b8049371ff664c1ed&quot;,
-#&gt;     &quot;size&quot;: 0,
-#&gt;     &quot;url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/vignettes?ref=master&quot;,
-#&gt;     &quot;html_url&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/vignettes&quot;,
-#&gt;     &quot;git_url&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/96b146dbc7e85dfbba49540b8049371ff664c1ed&quot;,
-#&gt;     &quot;download_url&quot;: {},
-#&gt;     &quot;type&quot;: &quot;dir&quot;,
-#&gt;     &quot;_links&quot;: {
-#&gt;       &quot;self&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/contents/vignettes?ref=master&quot;,
-#&gt;       &quot;git&quot;: &quot;https://api.github.com/repos/muschellij2/fslr/git/trees/96b146dbc7e85dfbba49540b8049371ff664c1ed&quot;,
-#&gt;       &quot;html&quot;: &quot;https://github.com/muschellij2/fslr/tree/master/vignettes&quot;
+#&gt;     "name": "vignettes",
+#&gt;     "path": "vignettes",
+#&gt;     "sha": "96b146dbc7e85dfbba49540b8049371ff664c1ed",
+#&gt;     "size": 0,
+#&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/vignettes?ref=master",
+#&gt;     "html_url": "https://github.com/muschellij2/fslr/tree/master/vignettes",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/96b146dbc7e85dfbba49540b8049371ff664c1ed",
+#&gt;     "download_url": {},
+#&gt;     "type": "dir",
+#&gt;     "_links": {
+#&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/vignettes?ref=master",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/96b146dbc7e85dfbba49540b8049371ff664c1ed",
+#&gt;       "html": "https://github.com/muschellij2/fslr/tree/master/vignettes"
 #&gt;     }
 #&gt;   }
 #&gt; ] </div></pre>

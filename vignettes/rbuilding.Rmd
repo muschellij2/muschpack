@@ -10,8 +10,8 @@ vignette: >
 ---
 
 ```{r, eval = TRUE, echo = FALSE}
-# pkg_name = "usethis"
-pkg_name = "devtools"
+pkg_name = "usethis"
+# pkg_name = "devtools"
 ```
 
 
@@ -95,7 +95,7 @@ Add the following lines:
 ```
 environment:
   global:
-    WARNINGS_ARE_ERORRS: 1
+    WARNINGS_ARE_ERRORS: 1
 ```
 to `appveyor.yml`.
 
