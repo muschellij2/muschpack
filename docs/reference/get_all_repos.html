@@ -99,7 +99,7 @@
     <p>Get all the repository information for a GitHub account</p>
     
 
-    <pre class="usage"><span class='fu'>get_all_repos</span>(<span class='kw'>username</span> <span class='kw'>=</span> <span class='st'>"neuroconductor"</span>, <span class='kw'>per_page</span> <span class='kw'>=</span> <span class='fl'>100</span>)</pre>
+    <pre class="usage"><span class='fu'>get_all_repos</span>(<span class='kw'>username</span> <span class='kw'>=</span> <span class='st'>"neuroconductor"</span>, <span class='kw'>per_page</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
@@ -112,6 +112,10 @@
       <th>per_page</th>
       <td><p>Number of repos to try to pull per page.
 Default is maximum of 100</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>arguments passed to <code>gh</code></p></td>
     </tr>
     </table>
     

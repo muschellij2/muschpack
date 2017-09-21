@@ -4,13 +4,15 @@
 \alias{get_all_repos}
 \title{Get all GitHub repositories for a user}
 \usage{
-get_all_repos(username = "neuroconductor", per_page = 100)
+get_all_repos(username = "neuroconductor", per_page = 100, ...)
 }
 \arguments{
 \item{username}{GitHub username to pull}
 
 \item{per_page}{Number of repos to try to pull per page.
 Default is maximum of 100}
+
+\item{...}{arguments passed to \code{\link{gh}}}
 }
 \value{
 List of package information

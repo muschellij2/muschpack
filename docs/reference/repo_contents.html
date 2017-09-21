@@ -99,11 +99,9 @@
     <p>Retrieves Github Repository Contents/filenames</p>
     
 
-    <pre class="usage"><span class='fu'>repo_contents</span>(<span class='no'>repo</span>)
+    <pre class="usage"><span class='fu'>repo_contents</span>(<span class='no'>repo</span>, <span class='no'>...</span>)
 
-<span class='fu'>repo_files</span>(<span class='no'>repo</span>)
-
-<span class='fu'>has_remote_dcf</span>(<span class='no'>repo</span>)</pre>
+<span class='fu'>repo_files</span>(<span class='no'>repo</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
@@ -111,6 +109,10 @@
     <tr>
       <th>repo</th>
       <td><p>Github repository in the order or user/repo</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>arguments passed to <code>gh</code></p></td>
     </tr>
     </table>
     

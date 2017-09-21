@@ -3,17 +3,16 @@
 \name{repo_contents}
 \alias{repo_contents}
 \alias{repo_files}
-\alias{has_remote_dcf}
 \title{Get Repository Contents}
 \usage{
-repo_contents(repo)
+repo_contents(repo, ...)
 
-repo_files(repo)
-
-has_remote_dcf(repo)
+repo_files(repo, ...)
 }
 \arguments{
 \item{repo}{Github repository in the order or user/repo}
+
+\item{...}{arguments passed to \code{\link{gh}}}
 }
 \value{
 A list or a character vector of files

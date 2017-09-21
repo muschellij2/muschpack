@@ -3,16 +3,21 @@
 \name{repo_has_file}
 \alias{repo_has_file}
 \alias{repo_has_description}
+\alias{has_remote_dcf}
 \title{Determine if GitHub Repository Has a file}
 \usage{
-repo_has_file(repo, file = "DESCRIPTION")
+repo_has_file(repo, file = "DESCRIPTION", ...)
 
-repo_has_description(repo)
+repo_has_description(repo, ...)
+
+has_remote_dcf(repo, ...)
 }
 \arguments{
 \item{repo}{Github repository in the order or user/repo}
 
 \item{file}{file to check if exists}
+
+\item{...}{arguments passed to \code{\link{gh}}}
 }
 \value{
 A character
