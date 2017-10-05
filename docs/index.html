@@ -92,6 +92,7 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <a href="#package-check-report" class="anchor"></a>Package Check Report</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(muschpack) 
 <span class="kw">library</span>(dplyr)
+
 df =<span class="st"> </span><span class="kw"><a href="reference/r_package_repos.html">r_package_repos</a></span>(<span class="dt">username =</span> <span class="st">"muschellij2"</span>)
 mine =<span class="st"> </span>df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="op">!</span>fork <span class="op">&amp;</span><span class="st"> </span>r_repo)
 mine =<span class="st"> </span>mine <span class="op">%&gt;%</span><span class="st"> </span>
@@ -133,6 +134,14 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 </tr>
 <tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/diffr">diffr</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/diffr"><img src="https://travis-ci.org/muschellij2/diffr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/diffr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/diffr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/diffr/issues">1</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/fslr">fslr</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/fslr"><img src="https://travis-ci.org/muschellij2/fslr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/fslr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/fslr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -140,7 +149,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/neurocInstall">neurocInstall</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/neurocInstall"><img src="https://travis-ci.org/muschellij2/neurocInstall.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/neurocInstall"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurocInstall?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -148,7 +157,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/papayaWidget">papayaWidget</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/papayaWidget"><img src="https://travis-ci.org/muschellij2/papayaWidget.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/papayaWidget"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/papayaWidget?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -156,7 +165,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/processVISION">processVISION</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/processVISION"><img src="https://travis-ci.org/muschellij2/processVISION.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/processVISION"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/processVISION?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -164,7 +173,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/spm12r">spm12r</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/spm12r"><img src="https://travis-ci.org/muschellij2/spm12r.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/spm12r"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/spm12r?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -172,7 +181,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/WhiteStripe">WhiteStripe</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/WhiteStripe"><img src="https://travis-ci.org/muschellij2/WhiteStripe.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/WhiteStripe"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/WhiteStripe?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -180,7 +189,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/afnir">afnir</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/afnir"><img src="https://travis-ci.org/muschellij2/afnir.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/afnir"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/afnir?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -188,7 +197,23 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/alvin">alvin</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/alvin"><img src="https://travis-ci.org/muschellij2/alvin.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/alvin"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/alvin?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/alvin/issues">0</a></td>
+<td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><i class="fa fa-check"></i></td>
+</tr>
 <tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/biobankr">biobankr</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/biobankr"><img src="https://travis-ci.org/muschellij2/biobankr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/biobankr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/biobankr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/biobankr/issues">0</a></td>
+<td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><i class="fa fa-check"></i></td>
+</tr>
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/brainR">brainR</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/brainR"><img src="https://travis-ci.org/muschellij2/brainR.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/brainR"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/brainR?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -196,7 +221,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/checkout">checkout</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/checkout"><img src="https://travis-ci.org/muschellij2/checkout.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/checkout"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/checkout?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -204,7 +229,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/cifti">cifti</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/cifti"><img src="https://travis-ci.org/muschellij2/cifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/cifti"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/cifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -212,7 +237,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/ct.malf.templates">ct.malf.templates</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/ct.malf.templates"><img src="https://travis-ci.org/muschellij2/ct.malf.templates.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/ct-malf-templates"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ct-malf-templates?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -220,7 +245,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/dcm2niir">dcm2niir</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/dcm2niir"><img src="https://travis-ci.org/muschellij2/dcm2niir.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/dcm2niir"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/dcm2niir?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -228,7 +253,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/dcmtk">dcmtk</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/dcmtk"><img src="https://travis-ci.org/muschellij2/dcmtk.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/dcmtk"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/dcmtk?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -236,19 +261,11 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/dhs">dhs</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/dhs"><img src="https://travis-ci.org/muschellij2/dhs.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/dhs"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/dhs?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/dhs/issues">0</a></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/muschellij2/diffr">diffr</a></td>
-<td align="left"><a href="https://travis-ci.org/muschellij2/diffr"><img src="https://travis-ci.org/muschellij2/diffr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/diffr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/diffr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td align="left"><a href="https://github.com/muschellij2/diffr/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -285,6 +302,14 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 </tr>
 <tr class="odd">
+<td align="left"><a href="https://github.com/muschellij2/fedreporter">fedreporter</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/fedreporter"><img src="https://travis-ci.org/muschellij2/fedreporter.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/fedreporter"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/fedreporter?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/fedreporter/issues">0</a></td>
+<td align="left"></td>
+<td align="left"><i class="fa fa-check"></i></td>
+</tr>
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/freesurfer">freesurfer</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/freesurfer"><img src="https://travis-ci.org/muschellij2/freesurfer.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/freesurfer"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/freesurfer?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -292,7 +317,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/gcite">gcite</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/gcite"><img src="https://travis-ci.org/muschellij2/gcite.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/gcite"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/gcite?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -300,7 +325,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/ggneuro">ggneuro</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/ggneuro"><img src="https://travis-ci.org/muschellij2/ggneuro.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/ggneuro"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ggneuro?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -308,7 +333,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/ghtravis">ghtravis</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/ghtravis"><img src="https://travis-ci.org/muschellij2/ghtravis.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/ghtravis"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ghtravis?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -316,7 +341,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/gifti">gifti</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/gifti"><img src="https://travis-ci.org/muschellij2/gifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/gifti"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/gifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -324,7 +349,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/glassdoor">glassdoor</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/glassdoor"><img src="https://travis-ci.org/muschellij2/glassdoor.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/glassdoor"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/glassdoor?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -332,7 +357,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/gluc">gluc</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/gluc"><img src="https://travis-ci.org/muschellij2/gluc.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/gluc"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/gluc?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -340,7 +365,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/googleCite">googleCite</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/googleCite"><img src="https://travis-ci.org/muschellij2/googleCite.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/googleCite"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/googleCite?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -348,7 +373,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/greedyreg">greedyreg</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/greedyreg"><img src="https://travis-ci.org/muschellij2/greedyreg.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/greedyreg"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/greedyreg?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -356,7 +381,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/I2C2">I2C2</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/I2C2"><img src="https://travis-ci.org/muschellij2/I2C2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/I2C2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/I2C2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -364,7 +389,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/ichseg">ichseg</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/ichseg"><img src="https://travis-ci.org/muschellij2/ichseg.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/ichseg"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ichseg?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -372,7 +397,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/itksnapr">itksnapr</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/itksnapr"><img src="https://travis-ci.org/muschellij2/itksnapr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/itksnapr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/itksnapr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -380,7 +405,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/jhudsl">jhudsl</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/jhudsl"><img src="https://travis-ci.org/muschellij2/jhudsl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/jhudsl"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/jhudsl?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -388,7 +413,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21">kirby21</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21"><img src="https://travis-ci.org/muschellij2/kirby21.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -396,7 +421,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scan_1">kirby21_scan_1</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21_scan_1"><img src="https://travis-ci.org/muschellij2/kirby21_scan_1.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scan_1"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scan_1?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -404,7 +429,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scan_2">kirby21_scan_2</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21_scan_2"><img src="https://travis-ci.org/muschellij2/kirby21_scan_2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scan_2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scan_2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -412,7 +437,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scanner">kirby21_scanner</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21_scanner"><img src="https://travis-ci.org/muschellij2/kirby21_scanner.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scanner"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scanner?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -420,7 +445,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.asl">kirby21.asl</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.asl"><img src="https://travis-ci.org/muschellij2/kirby21.asl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-asl"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-asl?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -428,7 +453,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.base">kirby21.base</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.base"><img src="https://travis-ci.org/muschellij2/kirby21.base.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-base"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-base?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -436,7 +461,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.det2">kirby21.det2</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.det2"><img src="https://travis-ci.org/muschellij2/kirby21.det2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-det2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-det2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -444,7 +469,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.dti">kirby21.dti</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.dti"><img src="https://travis-ci.org/muschellij2/kirby21.dti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-dti"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-dti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -452,7 +477,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.flair">kirby21.flair</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.flair"><img src="https://travis-ci.org/muschellij2/kirby21.flair.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-flair"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-flair?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -460,7 +485,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.fmri">kirby21.fmri</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.fmri"><img src="https://travis-ci.org/muschellij2/kirby21.fmri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-fmri"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-fmri?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -468,7 +493,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.mt">kirby21.mt</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.mt"><img src="https://travis-ci.org/muschellij2/kirby21.mt.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-mt"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-mt?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -476,7 +501,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.smri">kirby21.smri</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.smri"><img src="https://travis-ci.org/muschellij2/kirby21.smri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-smri"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-smri?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -484,7 +509,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.survey">kirby21.survey</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.survey"><img src="https://travis-ci.org/muschellij2/kirby21.survey.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-survey"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-survey?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -492,7 +517,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.t1">kirby21.t1</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.t1"><img src="https://travis-ci.org/muschellij2/kirby21.t1.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-t1"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-t1?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -500,7 +525,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.t2">kirby21.t2</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.t2"><img src="https://travis-ci.org/muschellij2/kirby21.t2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-t2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-t2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -508,7 +533,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.vaso">kirby21.vaso</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/kirby21.vaso"><img src="https://travis-ci.org/muschellij2/kirby21.vaso.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-vaso"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-vaso?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -516,7 +541,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/latexreadme">latexreadme</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/latexreadme"><img src="https://travis-ci.org/muschellij2/latexreadme.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/latexreadme"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/latexreadme?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -524,7 +549,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/lungct">lungct</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/lungct"><img src="https://travis-ci.org/muschellij2/lungct.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/lungct"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/lungct?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -532,7 +557,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/malf.templates">malf.templates</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/malf.templates"><img src="https://travis-ci.org/muschellij2/malf.templates.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/malf-templates"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/malf-templates?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -540,7 +565,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/massr">massr</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/massr"><img src="https://travis-ci.org/muschellij2/massr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/massr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/massr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -548,7 +573,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/matlabr">matlabr</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/matlabr"><img src="https://travis-ci.org/muschellij2/matlabr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/matlabr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/matlabr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -556,7 +581,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/msseg">msseg</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/msseg"><img src="https://travis-ci.org/muschellij2/msseg.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/msseg"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/msseg?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -564,7 +589,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/muschflow">muschflow</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/muschflow"><img src="https://travis-ci.org/muschellij2/muschflow.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/muschflow"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/muschflow?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -572,7 +597,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/muschmisc">muschmisc</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/muschmisc"><img src="https://travis-ci.org/muschellij2/muschmisc.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/muschmisc"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/muschmisc?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -580,7 +605,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/muschpack">muschpack</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/muschpack"><img src="https://travis-ci.org/muschellij2/muschpack.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/muschpack"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/muschpack?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -588,7 +613,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/neurobase">neurobase</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/neurobase"><img src="https://travis-ci.org/muschellij2/neurobase.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/neurobase"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurobase?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -596,7 +621,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/neuroc.deps">neuroc.deps</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/neuroc.deps"><img src="https://travis-ci.org/muschellij2/neuroc.deps.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/neuroc-deps"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neuroc-deps?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -604,7 +629,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/neurohcp">neurohcp</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/neurohcp"><img src="https://travis-ci.org/muschellij2/neurohcp.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/neurohcp"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurohcp?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -612,7 +637,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/neurometrics">neurometrics</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/neurometrics"><img src="https://travis-ci.org/muschellij2/neurometrics.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/neurometrics"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurometrics?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -620,7 +645,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/nitrc">nitrc</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/nitrc"><img src="https://travis-ci.org/muschellij2/nitrc.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/nitrc"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/nitrc?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -628,7 +653,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/oro.nifti">oro.nifti</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/oro.nifti"><img src="https://travis-ci.org/muschellij2/oro.nifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/oro-nifti"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/oro-nifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -636,7 +661,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/oslerInstall">oslerInstall</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/oslerInstall"><img src="https://travis-ci.org/muschellij2/oslerInstall.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/oslerInstall"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/oslerInstall?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -644,7 +669,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/papayar">papayar</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/papayar"><img src="https://travis-ci.org/muschellij2/papayar.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/papayar"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/papayar?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -652,7 +677,7 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"></td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/rcamino">rcamino</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/rcamino"><img src="https://travis-ci.org/muschellij2/rcamino.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/rcamino"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/rcamino?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -660,13 +685,21 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/rdcm2niix">rdcm2niix</a></td>
 <td align="left"><a href="https://travis-ci.org/muschellij2/rdcm2niix"><img src="https://travis-ci.org/muschellij2/rdcm2niix.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td align="left"><a href="https://ci.appveyor.com/project/muschellij2/rdcm2niix"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/rdcm2niix?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td align="left"><a href="https://github.com/muschellij2/rdcm2niix/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/muschellij2/robex">robex</a></td>
+<td align="left"><a href="https://travis-ci.org/muschellij2/robex"><img src="https://travis-ci.org/muschellij2/robex.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td align="left"><a href="https://ci.appveyor.com/project/muschellij2/robex"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/robex?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td align="left"><a href="https://github.com/muschellij2/robex/issues">0</a></td>
+<td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><i class="fa fa-check"></i></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/rscopus">rscopus</a></td>

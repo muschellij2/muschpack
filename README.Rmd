@@ -36,6 +36,7 @@ devtools::install_github("muschellij2/muschpack")
 ```{r example, cache=TRUE}
 library(muschpack) 
 library(dplyr)
+
 df = r_package_repos(username = "muschellij2")
 mine = df %>% filter(!fork & r_repo)
 mine = mine %>% 
