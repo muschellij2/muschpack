@@ -6,7 +6,8 @@ make_badge = function(badge_name = "", href, src) {
 
 make_cran_badge = function(pkg) {
 
-  src <- paste0("http://www.r-pkg.org/badges/version/", pkg)
+  # src <- paste0("http://www.r-pkg.org/badges/version/", pkg)
+  src <- paste0("http://www.r-pkg.org/badges/version-ago/", pkg)
   href <- paste0("https://cran.r-project.org/package=", pkg)
   make_badge("CRAN status", href = href, src = src)
 }
