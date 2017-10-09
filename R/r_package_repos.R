@@ -1,3 +1,23 @@
+make_badge = function(badge_name = "", href, src) {
+  img <- paste0("![", badge_name, "](", src, ")")
+  link <- paste0("[", img, "](", href, ")")
+  link
+}
+
+make_cran_badge = function(pkg) {
+
+  src <- paste0("http://www.r-pkg.org/badges/version/", pkg)
+  href <- paste0("https://cran.r-project.org/package=", pkg)
+  make_badge("CRAN status", href = href, src = src)
+}
+
+make_dl_badge = function(pkg) {
+  href = paste0(
+    "http://cran.rstudio.com/web/packages/", pkg, "/index.html")
+  src = paste0("http://cranlogs.r-pkg.org/badges/", pkg)
+  make_badge("CRANlogs downloads", href = href, src = src)
+}
+
 #' Package Repository Information
 #'
 #' Grabs all repository information from GitHub
@@ -70,6 +90,9 @@ r_package_repos = function(username = "muschellij2", ...) {
     "https://ci.appveyor.com/project/",
     gsub("[.]", "-", df$remote)
   )
+
+  df$cran_badge = make_cran_badge(pkg = df$bare)
+  df$dl_badge = make_dl_badge(pkg = df$bare)
 
   df$appveyor_badge = paste0(
     "[![AppVeyor Build Status](",

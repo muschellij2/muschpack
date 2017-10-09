@@ -45,8 +45,9 @@ mine = mine %>%
 mine$issues_page = paste0("[", mine$open_issues_count, "](", 
                           mine$issues_page, ")")
 mine = mine %>% 
-  select(gh_link, travis_badge, 
-         appveyor_badge, issues_page, vignettes, tests)
+  select(gh_link, travis_badge,
+         appveyor_badge, issues_page, vignettes, tests,
+         cran_badge, dl_badge)
 make_yes = function(x){
   ifelse(x, '<i class="fa fa-check"></i>', '')
 }
