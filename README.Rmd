@@ -43,10 +43,8 @@ mine = mine %>%
   arrange(desc(open_issues_count), bare)
 mine$issues_page = paste0("[", mine$open_issues_count, "](", 
                           mine$issues_page, ")")
-mine = mine %>% 
-  select(gh_link, travis_badge,
-         appveyor_badge, issues_page, vignettes, tests,
-         cran_badge, dl_badge)
+
+mine = add_package_info(mine)
 make_yes = function(x){
   ifelse(x, '<i class="fa fa-check"></i>', '')
 }
@@ -55,9 +53,13 @@ mine = mine %>%
     vignettes = make_yes(vignettes),
     tests = make_yes(tests))
 
-colnames(mine) = c("GitHub Link", "Travis Status", 
+mine = mine %>% 
+  select(gh_link, package_name, travis_badge,
+         appveyor_badge, issues_page, vignettes, tests,
+         version, cran_badge, dl_badge)
+colnames(mine) = c("GitHub Link", "Package Name", "Travis Status", 
                    "Appveyor Status", "Number of Issues",
                    "Vignettes Folder", "Tests Folder", 
-                   "CRAN", "Downloads")
+                   "GH Version", "CRAN", "Downloads")
 knitr::kable(mine)
 ```

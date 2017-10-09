@@ -35,7 +35,9 @@ r_package_repos = function(username = "muschellij2", ...) {
   repos = get_all_repos(username = username, ...)
   remotes = vapply(repos, `[[`, "full_name", FUN.VALUE = character(1))
   names(repos) = remotes
-  all_files = pbapply::pblapply(remotes, repo_files)
+  all_contents = pbapply::pblapply(remotes, repo_contents)
+  all_files = lapply(all_contents, repo_filenames)
+  # all_files = pbapply::pblapply(remotes, repo_files)
   # all_files = pbapply::pblapply(remotes, function(x) {
   #   print(x)
   #   repo_files(x)
@@ -43,6 +45,21 @@ r_package_repos = function(username = "muschellij2", ...) {
   dd = sapply(all_files, function(x){
     "DESCRIPTION" %in% x
   })
+
+  which_dd = sapply(all_files, function(x){
+    x %in% "DESCRIPTION"
+  })
+
+  dcf_urls = mapply(function(x, y, z) {
+    if (!z) {
+      return(NA_character_)
+    }
+    x = x[[which(y)]]$download_url
+    if (is.null(x)) {
+      return(NA_character_)
+    }
+    x
+  }, all_contents, which_dd, dd)
 
   vignettes = sapply(all_files, function(x){
     "vignettes" %in% x
@@ -55,9 +72,13 @@ r_package_repos = function(username = "muschellij2", ...) {
   df = dplyr::data_frame(
     remote = remotes,
     r_repo = dd,
+    dcf_url = dcf_urls,
     tests = tests,
     vignettes = vignettes
   )
+
+
+
   repo_info = lapply(repos, function(x) {
     dplyr::as_data_frame(t(unlist(x)))
   })
@@ -105,4 +126,30 @@ r_package_repos = function(username = "muschellij2", ...) {
 }
 
 
+#' Add R Package Information
+#'
+#' @param df A data.frame from \code{\link{r_package_repos}}
+#'
+#' @return A data.frame with additional package information
+#' @export
+add_package_info = function(df) {
 
+  dcf_info = download_dcf(df$dcf_url)
+
+  get_field = function(field) {
+    sapply(dcf_info$dcfs, function(x) {
+      if (inherits(x, "description")) {
+        x = x$get(field)
+        x = unname(x)
+      } else {
+        x = NA
+      }
+      return(x)
+    })
+  }
+  df$version = get_field("Version")
+  df$package_name = get_field("Package")
+  df$date = get_field("Date")
+
+  return(df)
+}

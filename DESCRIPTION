@@ -1,7 +1,7 @@
 Package: muschpack
 Type: Package
 Title: Build Status of All John 'Muschelli' Packages
-Version: 0.5.1
+Version: 0.6.0
 Authors@R: person(given = "John",
            family = "Muschelli",
            role = "cre",
@@ -17,7 +17,9 @@ Imports:
     tidyr,
     data.table,
     pbapply,
-    gh
+    gh,
+    desc,
+    httr
 Suggests: knitr,
     rmarkdown,
     testthat

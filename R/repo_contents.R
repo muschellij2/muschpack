@@ -28,10 +28,8 @@ repo_contents = function(repo, ...) {
   return(res)
 }
 
-#' @export
-#' @rdname repo_contents
-repo_files = function(repo, ...) {
-  res = repo_contents(repo = repo, ...)
+
+repo_filenames = function(res) {
   if (length(res) == 0) {
     files = NA
   } else {
@@ -46,4 +44,15 @@ repo_files = function(repo, ...) {
   }
   return(files)
 }
+
+#' @export
+#' @rdname repo_contents
+repo_files = function(repo, ...) {
+  res = repo_contents(repo = repo, ...)
+  out = repo_filenames(res)
+  return(out)
+}
+
+
+
 
