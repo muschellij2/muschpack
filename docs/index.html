@@ -101,8 +101,9 @@ mine =<span class="st"> </span>mine <span class="op">%&gt;%</span><span class="s
 mine<span class="op">$</span>issues_page =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">"["</span>, mine<span class="op">$</span>open_issues_count, <span class="st">"]("</span>, 
                           mine<span class="op">$</span>issues_page, <span class="st">")"</span>)
 mine =<span class="st"> </span>mine <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(gh_link, travis_badge, 
-         appveyor_badge, issues_page, vignettes, tests)
+<span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(gh_link, travis_badge,
+         appveyor_badge, issues_page, vignettes, tests,
+         cran_badge, dl_badge)
 make_yes =<span class="st"> </span><span class="cf">function</span>(x){
   <span class="kw">ifelse</span>(x, <span class="st">'&lt;i class="fa fa-check"&gt;&lt;/i&gt;'</span>, <span class="st">''</span>)
 }
@@ -113,7 +114,8 @@ mine =<span class="st"> </span>mine <span class="op">%&gt;%</span><span class="s
 
 <span class="kw">colnames</span>(mine) =<span class="st"> </span><span class="kw">c</span>(<span class="st">"GitHub Link"</span>, <span class="st">"Travis Status"</span>, 
                    <span class="st">"Appveyor Status"</span>, <span class="st">"Number of Issues"</span>,
-                   <span class="st">"Vignettes Folder"</span>, <span class="st">"Tests Folder"</span>)
+                   <span class="st">"Vignettes Folder"</span>, <span class="st">"Tests Folder"</span>, 
+                   <span class="st">"CRAN"</span>, <span class="st">"Downloads"</span>)
 knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>(mine)</code></pre></div>
 <table class="table">
 <thead><tr class="header">
@@ -123,6 +125,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <th align="left">Number of Issues</th>
 <th align="left">Vignettes Folder</th>
 <th align="left">Tests Folder</th>
+<th align="left">CRAN</th>
+<th align="left">Downloads</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
@@ -132,6 +136,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/clusterRundown/issues">1</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=clusterRundown"><img src="http://www.r-pkg.org/badges/version/clusterRundown" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/clusterRundown/index.html"><img src="http://cranlogs.r-pkg.org/badges/clusterRundown" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/diffr">diffr</a></td>
@@ -140,6 +146,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/diffr/issues">1</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=diffr"><img src="http://www.r-pkg.org/badges/version/diffr" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/diffr/index.html"><img src="http://cranlogs.r-pkg.org/badges/diffr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/fslr">fslr</a></td>
@@ -148,6 +156,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/fslr/issues">1</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=fslr"><img src="http://www.r-pkg.org/badges/version/fslr" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/fslr/index.html"><img src="http://cranlogs.r-pkg.org/badges/fslr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/neurocInstall">neurocInstall</a></td>
@@ -156,6 +166,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/neurocInstall/issues">1</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=neurocInstall"><img src="http://www.r-pkg.org/badges/version/neurocInstall" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/neurocInstall/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurocInstall" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/papayaWidget">papayaWidget</a></td>
@@ -164,6 +176,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/papayaWidget/issues">1</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=papayaWidget"><img src="http://www.r-pkg.org/badges/version/papayaWidget" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/papayaWidget/index.html"><img src="http://cranlogs.r-pkg.org/badges/papayaWidget" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/processVISION">processVISION</a></td>
@@ -172,6 +186,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/processVISION/issues">1</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=processVISION"><img src="http://www.r-pkg.org/badges/version/processVISION" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/processVISION/index.html"><img src="http://cranlogs.r-pkg.org/badges/processVISION" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/spm12r">spm12r</a></td>
@@ -180,6 +196,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/spm12r/issues">1</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=spm12r"><img src="http://www.r-pkg.org/badges/version/spm12r" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/spm12r/index.html"><img src="http://cranlogs.r-pkg.org/badges/spm12r" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/WhiteStripe">WhiteStripe</a></td>
@@ -188,6 +206,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/WhiteStripe/issues">1</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=WhiteStripe"><img src="http://www.r-pkg.org/badges/version/WhiteStripe" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/WhiteStripe/index.html"><img src="http://cranlogs.r-pkg.org/badges/WhiteStripe" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/afnir">afnir</a></td>
@@ -196,6 +216,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/afnir/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=afnir"><img src="http://www.r-pkg.org/badges/version/afnir" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/afnir/index.html"><img src="http://cranlogs.r-pkg.org/badges/afnir" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/alvin">alvin</a></td>
@@ -204,6 +226,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/alvin/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=alvin"><img src="http://www.r-pkg.org/badges/version/alvin" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/alvin/index.html"><img src="http://cranlogs.r-pkg.org/badges/alvin" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/biobankr">biobankr</a></td>
@@ -212,6 +236,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/biobankr/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=biobankr"><img src="http://www.r-pkg.org/badges/version/biobankr" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/biobankr/index.html"><img src="http://cranlogs.r-pkg.org/badges/biobankr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/brainR">brainR</a></td>
@@ -220,6 +246,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/brainR/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=brainR"><img src="http://www.r-pkg.org/badges/version/brainR" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/brainR/index.html"><img src="http://cranlogs.r-pkg.org/badges/brainR" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/checkout">checkout</a></td>
@@ -228,6 +256,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/checkout/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=checkout"><img src="http://www.r-pkg.org/badges/version/checkout" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/checkout/index.html"><img src="http://cranlogs.r-pkg.org/badges/checkout" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/cifti">cifti</a></td>
@@ -236,6 +266,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/cifti/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=cifti"><img src="http://www.r-pkg.org/badges/version/cifti" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/cifti/index.html"><img src="http://cranlogs.r-pkg.org/badges/cifti" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/ct.malf.templates">ct.malf.templates</a></td>
@@ -244,6 +276,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/ct.malf.templates/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=ct.malf.templates"><embed src="http://www.r-pkg.org/badges/version/ct.malf.templates"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/ct.malf.templates/index.html"><embed src="http://cranlogs.r-pkg.org/badges/ct.malf.templates"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/dcm2niir">dcm2niir</a></td>
@@ -252,6 +286,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/dcm2niir/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=dcm2niir"><img src="http://www.r-pkg.org/badges/version/dcm2niir" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/dcm2niir/index.html"><img src="http://cranlogs.r-pkg.org/badges/dcm2niir" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/dcmtk">dcmtk</a></td>
@@ -260,6 +296,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/dcmtk/issues">0</a></td>
 <td align="left"></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=dcmtk"><img src="http://www.r-pkg.org/badges/version/dcmtk" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/dcmtk/index.html"><img src="http://cranlogs.r-pkg.org/badges/dcmtk" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/dhs">dhs</a></td>
@@ -268,6 +306,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/dhs/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=dhs"><img src="http://www.r-pkg.org/badges/version/dhs" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/dhs/index.html"><img src="http://cranlogs.r-pkg.org/badges/dhs" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/drammsr">drammsr</a></td>
@@ -276,6 +316,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/drammsr/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=drammsr"><img src="http://www.r-pkg.org/badges/version/drammsr" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/drammsr/index.html"><img src="http://cranlogs.r-pkg.org/badges/drammsr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/dtitk">dtitk</a></td>
@@ -284,6 +326,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/dtitk/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=dtitk"><img src="http://www.r-pkg.org/badges/version/dtitk" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/dtitk/index.html"><img src="http://cranlogs.r-pkg.org/badges/dtitk" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/ENARSC2015">ENARSC2015</a></td>
@@ -292,6 +336,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/ENARSC2015/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=ENARSC2015"><img src="http://www.r-pkg.org/badges/version/ENARSC2015" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/ENARSC2015/index.html"><img src="http://cranlogs.r-pkg.org/badges/ENARSC2015" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/extrantsr">extrantsr</a></td>
@@ -300,6 +346,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/extrantsr/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=extrantsr"><img src="http://www.r-pkg.org/badges/version/extrantsr" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/extrantsr/index.html"><img src="http://cranlogs.r-pkg.org/badges/extrantsr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/fedreporter">fedreporter</a></td>
@@ -308,6 +356,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/fedreporter/issues">0</a></td>
 <td align="left"></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=fedreporter"><img src="http://www.r-pkg.org/badges/version/fedreporter" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/fedreporter/index.html"><img src="http://cranlogs.r-pkg.org/badges/fedreporter" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/freesurfer">freesurfer</a></td>
@@ -316,6 +366,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/freesurfer/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=freesurfer"><img src="http://www.r-pkg.org/badges/version/freesurfer" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/freesurfer/index.html"><img src="http://cranlogs.r-pkg.org/badges/freesurfer" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/gcite">gcite</a></td>
@@ -324,6 +376,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/gcite/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=gcite"><img src="http://www.r-pkg.org/badges/version/gcite" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/gcite/index.html"><img src="http://cranlogs.r-pkg.org/badges/gcite" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/ggneuro">ggneuro</a></td>
@@ -332,6 +386,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/ggneuro/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=ggneuro"><img src="http://www.r-pkg.org/badges/version/ggneuro" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/ggneuro/index.html"><img src="http://cranlogs.r-pkg.org/badges/ggneuro" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/ghtravis">ghtravis</a></td>
@@ -340,6 +396,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/ghtravis/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=ghtravis"><img src="http://www.r-pkg.org/badges/version/ghtravis" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/ghtravis/index.html"><img src="http://cranlogs.r-pkg.org/badges/ghtravis" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/gifti">gifti</a></td>
@@ -348,6 +406,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/gifti/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=gifti"><img src="http://www.r-pkg.org/badges/version/gifti" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/gifti/index.html"><img src="http://cranlogs.r-pkg.org/badges/gifti" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/glassdoor">glassdoor</a></td>
@@ -356,6 +416,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/glassdoor/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=glassdoor"><img src="http://www.r-pkg.org/badges/version/glassdoor" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/glassdoor/index.html"><img src="http://cranlogs.r-pkg.org/badges/glassdoor" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/gluc">gluc</a></td>
@@ -364,6 +426,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/gluc/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=gluc"><img src="http://www.r-pkg.org/badges/version/gluc" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/gluc/index.html"><img src="http://cranlogs.r-pkg.org/badges/gluc" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/googleCite">googleCite</a></td>
@@ -372,6 +436,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/googleCite/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=googleCite"><img src="http://www.r-pkg.org/badges/version/googleCite" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/googleCite/index.html"><img src="http://cranlogs.r-pkg.org/badges/googleCite" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/greedyreg">greedyreg</a></td>
@@ -380,6 +446,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/greedyreg/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=greedyreg"><img src="http://www.r-pkg.org/badges/version/greedyreg" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/greedyreg/index.html"><img src="http://cranlogs.r-pkg.org/badges/greedyreg" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/I2C2">I2C2</a></td>
@@ -388,6 +456,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/I2C2/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=I2C2"><img src="http://www.r-pkg.org/badges/version/I2C2" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/I2C2/index.html"><img src="http://cranlogs.r-pkg.org/badges/I2C2" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/ichseg">ichseg</a></td>
@@ -396,6 +466,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/ichseg/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=ichseg"><img src="http://www.r-pkg.org/badges/version/ichseg" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/ichseg/index.html"><img src="http://cranlogs.r-pkg.org/badges/ichseg" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/itksnapr">itksnapr</a></td>
@@ -404,6 +476,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/itksnapr/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=itksnapr"><img src="http://www.r-pkg.org/badges/version/itksnapr" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/itksnapr/index.html"><img src="http://cranlogs.r-pkg.org/badges/itksnapr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/jhudsl">jhudsl</a></td>
@@ -412,6 +486,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/jhudsl/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=jhudsl"><img src="http://www.r-pkg.org/badges/version/jhudsl" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/jhudsl/index.html"><img src="http://cranlogs.r-pkg.org/badges/jhudsl" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21">kirby21</a></td>
@@ -420,6 +496,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21"><img src="http://www.r-pkg.org/badges/version/kirby21" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21/index.html"><img src="http://cranlogs.r-pkg.org/badges/kirby21" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scan_1">kirby21_scan_1</a></td>
@@ -428,6 +506,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scan_1/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21_scan_1"><img src="http://www.r-pkg.org/badges/version/kirby21_scan_1" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21_scan_1/index.html"><img src="http://cranlogs.r-pkg.org/badges/kirby21_scan_1" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scan_2">kirby21_scan_2</a></td>
@@ -436,6 +516,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scan_2/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21_scan_2"><img src="http://www.r-pkg.org/badges/version/kirby21_scan_2" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21_scan_2/index.html"><img src="http://cranlogs.r-pkg.org/badges/kirby21_scan_2" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scanner">kirby21_scanner</a></td>
@@ -444,6 +526,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21_scanner/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21_scanner"><img src="http://www.r-pkg.org/badges/version/kirby21_scanner" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21_scanner/index.html"><img src="http://cranlogs.r-pkg.org/badges/kirby21_scanner" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.asl">kirby21.asl</a></td>
@@ -452,6 +536,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.asl/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.asl"><embed src="http://www.r-pkg.org/badges/version/kirby21.asl"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.asl/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.asl"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.base">kirby21.base</a></td>
@@ -460,6 +546,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.base/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.base"><embed src="http://www.r-pkg.org/badges/version/kirby21.base"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.base/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.base"></embed></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.det2">kirby21.det2</a></td>
@@ -468,6 +556,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.det2/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.det2"><embed src="http://www.r-pkg.org/badges/version/kirby21.det2"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.det2/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.det2"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.dti">kirby21.dti</a></td>
@@ -476,6 +566,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.dti/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.dti"><embed src="http://www.r-pkg.org/badges/version/kirby21.dti"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.dti/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.dti"></embed></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.flair">kirby21.flair</a></td>
@@ -484,6 +576,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.flair/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.flair"><embed src="http://www.r-pkg.org/badges/version/kirby21.flair"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.flair/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.flair"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.fmri">kirby21.fmri</a></td>
@@ -492,6 +586,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.fmri/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.fmri"><embed src="http://www.r-pkg.org/badges/version/kirby21.fmri"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.fmri/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.fmri"></embed></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.mt">kirby21.mt</a></td>
@@ -500,6 +596,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.mt/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.mt"><embed src="http://www.r-pkg.org/badges/version/kirby21.mt"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.mt/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.mt"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.smri">kirby21.smri</a></td>
@@ -508,6 +606,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.smri/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.smri"><embed src="http://www.r-pkg.org/badges/version/kirby21.smri"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.smri/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.smri"></embed></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.survey">kirby21.survey</a></td>
@@ -516,6 +616,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.survey/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.survey"><embed src="http://www.r-pkg.org/badges/version/kirby21.survey"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.survey/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.survey"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.t1">kirby21.t1</a></td>
@@ -524,6 +626,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.t1/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.t1"><embed src="http://www.r-pkg.org/badges/version/kirby21.t1"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.t1/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.t1"></embed></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.t2">kirby21.t2</a></td>
@@ -532,6 +636,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.t2/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.t2"><embed src="http://www.r-pkg.org/badges/version/kirby21.t2"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.t2/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.t2"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/kirby21.vaso">kirby21.vaso</a></td>
@@ -540,6 +646,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/kirby21.vaso/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=kirby21.vaso"><embed src="http://www.r-pkg.org/badges/version/kirby21.vaso"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/kirby21.vaso/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.vaso"></embed></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/latexreadme">latexreadme</a></td>
@@ -548,6 +656,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/latexreadme/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=latexreadme"><img src="http://www.r-pkg.org/badges/version/latexreadme" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/latexreadme/index.html"><img src="http://cranlogs.r-pkg.org/badges/latexreadme" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/lungct">lungct</a></td>
@@ -556,6 +666,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/lungct/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=lungct"><img src="http://www.r-pkg.org/badges/version/lungct" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/lungct/index.html"><img src="http://cranlogs.r-pkg.org/badges/lungct" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/malf.templates">malf.templates</a></td>
@@ -564,6 +676,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/malf.templates/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=malf.templates"><embed src="http://www.r-pkg.org/badges/version/malf.templates"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/malf.templates/index.html"><embed src="http://cranlogs.r-pkg.org/badges/malf.templates"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/massr">massr</a></td>
@@ -572,6 +686,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/massr/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=massr"><img src="http://www.r-pkg.org/badges/version/massr" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/massr/index.html"><img src="http://cranlogs.r-pkg.org/badges/massr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/matlabr">matlabr</a></td>
@@ -580,6 +696,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/matlabr/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=matlabr"><img src="http://www.r-pkg.org/badges/version/matlabr" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/matlabr/index.html"><img src="http://cranlogs.r-pkg.org/badges/matlabr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/msseg">msseg</a></td>
@@ -588,6 +706,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/msseg/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=msseg"><img src="http://www.r-pkg.org/badges/version/msseg" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/msseg/index.html"><img src="http://cranlogs.r-pkg.org/badges/msseg" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/muschflow">muschflow</a></td>
@@ -596,6 +716,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/muschflow/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=muschflow"><img src="http://www.r-pkg.org/badges/version/muschflow" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/muschflow/index.html"><img src="http://cranlogs.r-pkg.org/badges/muschflow" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/muschmisc">muschmisc</a></td>
@@ -604,6 +726,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/muschmisc/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=muschmisc"><img src="http://www.r-pkg.org/badges/version/muschmisc" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/muschmisc/index.html"><img src="http://cranlogs.r-pkg.org/badges/muschmisc" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/muschpack">muschpack</a></td>
@@ -612,6 +736,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/muschpack/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=muschpack"><img src="http://www.r-pkg.org/badges/version/muschpack" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/muschpack/index.html"><img src="http://cranlogs.r-pkg.org/badges/muschpack" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/neurobase">neurobase</a></td>
@@ -620,6 +746,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/neurobase/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=neurobase"><img src="http://www.r-pkg.org/badges/version/neurobase" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/neurobase/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurobase" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/neuroc.deps">neuroc.deps</a></td>
@@ -628,6 +756,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/neuroc.deps/issues">0</a></td>
 <td align="left"></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=neuroc.deps"><embed src="http://www.r-pkg.org/badges/version/neuroc.deps"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/neuroc.deps/index.html"><embed src="http://cranlogs.r-pkg.org/badges/neuroc.deps"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/neurohcp">neurohcp</a></td>
@@ -636,6 +766,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/neurohcp/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=neurohcp"><img src="http://www.r-pkg.org/badges/version/neurohcp" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/neurohcp/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurohcp" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/neurometrics">neurometrics</a></td>
@@ -644,6 +776,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/neurometrics/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=neurometrics"><img src="http://www.r-pkg.org/badges/version/neurometrics" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/neurometrics/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurometrics" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/nitrc">nitrc</a></td>
@@ -652,6 +786,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/nitrc/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=nitrc"><img src="http://www.r-pkg.org/badges/version/nitrc" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/nitrc/index.html"><img src="http://cranlogs.r-pkg.org/badges/nitrc" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/oro.nifti">oro.nifti</a></td>
@@ -660,6 +796,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/oro.nifti/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=oro.nifti"><embed src="http://www.r-pkg.org/badges/version/oro.nifti"></embed></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/oro.nifti/index.html"><embed src="http://cranlogs.r-pkg.org/badges/oro.nifti"></embed></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/oslerInstall">oslerInstall</a></td>
@@ -668,6 +806,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/oslerInstall/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=oslerInstall"><img src="http://www.r-pkg.org/badges/version/oslerInstall" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/oslerInstall/index.html"><img src="http://cranlogs.r-pkg.org/badges/oslerInstall" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/papayar">papayar</a></td>
@@ -676,6 +816,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/papayar/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=papayar"><img src="http://www.r-pkg.org/badges/version/papayar" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/papayar/index.html"><img src="http://cranlogs.r-pkg.org/badges/papayar" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/rcamino">rcamino</a></td>
@@ -684,6 +826,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/rcamino/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=rcamino"><img src="http://www.r-pkg.org/badges/version/rcamino" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/rcamino/index.html"><img src="http://cranlogs.r-pkg.org/badges/rcamino" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/rdcm2niix">rdcm2niix</a></td>
@@ -692,6 +836,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/rdcm2niix/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=rdcm2niix"><img src="http://www.r-pkg.org/badges/version/rdcm2niix" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/rdcm2niix/index.html"><img src="http://cranlogs.r-pkg.org/badges/rdcm2niix" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/robex">robex</a></td>
@@ -700,6 +846,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/robex/issues">0</a></td>
 <td align="left"><i class="fa fa-check"></i></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=robex"><img src="http://www.r-pkg.org/badges/version/robex" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/robex/index.html"><img src="http://cranlogs.r-pkg.org/badges/robex" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/rscopus">rscopus</a></td>
@@ -708,6 +856,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/rscopus/issues">0</a></td>
 <td align="left"></td>
 <td align="left"><i class="fa fa-check"></i></td>
+<td align="left"><a href="https://cran.r-project.org/package=rscopus"><img src="http://www.r-pkg.org/badges/version/rscopus" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/rscopus/index.html"><img src="http://cranlogs.r-pkg.org/badges/rscopus" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/smallpdf">smallpdf</a></td>
@@ -716,6 +866,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/smallpdf/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=smallpdf"><img src="http://www.r-pkg.org/badges/version/smallpdf" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/smallpdf/index.html"><img src="http://cranlogs.r-pkg.org/badges/smallpdf" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/ssgraph">ssgraph</a></td>
@@ -724,6 +876,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/ssgraph/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=ssgraph"><img src="http://www.r-pkg.org/badges/version/ssgraph" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/ssgraph/index.html"><img src="http://cranlogs.r-pkg.org/badges/ssgraph" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/muschellij2/statamd">statamd</a></td>
@@ -732,6 +886,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/statamd/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=statamd"><img src="http://www.r-pkg.org/badges/version/statamd" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/statamd/index.html"><img src="http://cranlogs.r-pkg.org/badges/statamd" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/muschellij2/travisrgl">travisrgl</a></td>
@@ -740,6 +896,8 @@ knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <td align="left"><a href="https://github.com/muschellij2/travisrgl/issues">0</a></td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"><a href="https://cran.r-project.org/package=travisrgl"><img src="http://www.r-pkg.org/badges/version/travisrgl" alt="CRAN status"></a></td>
+<td align="left"><a href="http://cran.rstudio.com/web/packages/travisrgl/index.html"><img src="http://cranlogs.r-pkg.org/badges/travisrgl" alt="CRANlogs downloads"></a></td>
 </tr>
 </tbody>
 </table>

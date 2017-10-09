@@ -58,6 +58,7 @@ mine = mine %>%
 
 colnames(mine) = c("GitHub Link", "Travis Status", 
                    "Appveyor Status", "Number of Issues",
-                   "Vignettes Folder", "Tests Folder")
+                   "Vignettes Folder", "Tests Folder", 
+                   "CRAN", "Downloads")
 knitr::kable(mine)
 ```
