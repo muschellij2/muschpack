@@ -151,5 +151,8 @@ add_package_info = function(df) {
   df$package_name = get_field("Package")
   df$date = get_field("Date")
 
+  df$gh_link = paste0(
+    "[", df$package_name, "](", df$gh_repo, ")")
+
   return(df)
 }

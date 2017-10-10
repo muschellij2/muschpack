@@ -54,10 +54,10 @@ mine = mine %>%
     tests = make_yes(tests))
 
 mine = mine %>% 
-  select(gh_link, package_name, travis_badge,
+  select(gh_link, travis_badge,
          appveyor_badge, issues_page, vignettes, tests,
          version, cran_badge, dl_badge)
-colnames(mine) = c("GitHub Link", "Package Name", "Travis Status", 
+colnames(mine) = c("GitHub Link", "Travis Status", 
                    "Appveyor Status", "Number of Issues",
                    "Vignettes Folder", "Tests Folder", 
                    "GH Version", "CRAN", "Downloads")
