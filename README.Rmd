@@ -40,27 +40,18 @@ library(dplyr)
 df = r_package_repos(username = "muschellij2")
 mine = df %>% filter(!fork & r_repo)
 mine = mine %>% 
-  filter(!grepl("^test", bare)) %>% 
-  arrange(desc(open_issues_count), bare)
-mine$issues_page = paste0("[", mine$open_issues_count, "](", 
-                          mine$issues_page, ")")
-
-mine = add_package_info(mine)
-make_yes = function(x){
-  ifelse(x, '<i class="fa fa-check"></i>', '')
-}
-mine = mine %>% 
-  mutate(
-    vignettes = make_yes(vignettes),
-    tests = make_yes(tests))
-
-mine = mine %>% 
-  select(gh_link, travis_badge,
-         appveyor_badge, issues_page, vignettes, tests,
-         version, cran_badge, dl_badge)
-colnames(mine) = c("GitHub Link", "Travis Status", 
-                   "Appveyor Status", "Number of Issues",
-                   "Vignettes Folder", "Tests Folder", 
-                   "GH Version", "CRAN", "Downloads")
+  filter(!grepl("^test", bare)) 
+mine = package_table(mine)
 knitr::kable(mine)
+```
+
+## Neuroconductor report
+
+```{r neuroc, cache=TRUE}
+library(muschpack) 
+library(dplyr)
+
+df = r_package_repos(username = "neuroconductor")
+neuroc = package_table(df)
+knitr::kable(neuroc)
 ```
