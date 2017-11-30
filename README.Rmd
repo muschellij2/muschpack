@@ -52,6 +52,6 @@ library(muschpack)
 library(dplyr)
 
 df = r_package_repos(username = "neuroconductor")
-neuroc = package_table(df, make_check = FALSE)
+neuroc = package_table(df)
 knitr::kable(neuroc)
 ```
