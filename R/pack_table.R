@@ -2,11 +2,12 @@
 #'
 #' @param df A \code{data.frame} from \code{r_package_repos} that has
 #' been subset to what you want
+#' @param make_check Make the \code{TRUE/FALSE} into checkmarks
 #'
 #' @return A \code{data.frame} that works well with \code{kable}
 #' @export
 #'
-package_table = function(df) {
+package_table = function(df, make_check = TRUE) {
   mine = df %>%
     arrange(desc(open_issues_count), bare)
   mine$issues_page = paste0("[", mine$open_issues_count, "](",
@@ -16,10 +17,12 @@ package_table = function(df) {
   make_yes = function(x){
     ifelse(x, '<i class="fa fa-check"></i>', '')
   }
-  mine = mine %>%
-    mutate(
-      vignettes = make_yes(vignettes),
-      tests = make_yes(tests))
+  if (make_check) {
+    mine = mine %>%
+      mutate(
+        vignettes = make_yes(vignettes),
+        tests = make_yes(tests))
+  }
 
   mine = mine %>%
     select(gh_link, travis_badge,

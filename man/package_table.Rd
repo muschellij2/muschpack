@@ -4,11 +4,13 @@
 \alias{package_table}
 \title{Package Table for Printing}
 \usage{
-package_table(df)
+package_table(df, make_check = TRUE)
 }
 \arguments{
 \item{df}{A \code{data.frame} from \code{r_package_repos} that has
 been subset to what you want}
+
+\item{make_check}{Make the \code{TRUE/FALSE} into checkmarks}
 }
 \value{
 A \code{data.frame} that works well with \code{kable}
