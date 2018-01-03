@@ -29,10 +29,25 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
 </li>
 <li>
-  <a href="articles/index.html">Articles</a>
+  <a href="reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/rbuilding.html">Building R Packages</a>
+    </li>
+  </ul>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -64,28 +79,23 @@
 <p>The <code>muschpack</code> package: Provides a build status for all John ‘Muschelli’ ‘GitHub’ packages.</p>
 <section id="installation" class="level2"><h2>Installation</h2>
 <p>You can install muschpack from github with:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><div class="sourceLine" id="1" href="#1" data-line-number="1"><span class="co"># install.packages("devtools")</span></div>
-<div class="sourceLine" id="2" href="#2" data-line-number="2">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"muschellij2/muschpack"</span>)</div></code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># install.packages("devtools")</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"muschellij2/muschpack"</span>)</a></code></pre></div>
 </section></section><section id="package-check-report" class="level1"><h1>Package Check Report</h1>
-<pre class="sourceCode r"><code class="sourceCode r"><div class="sourceLine" id="1" href="#1" data-line-number="1">
-<span class="kw">library</span>(muschpack) </div>
-<div class="sourceLine" id="2" href="#2" data-line-number="2">
-<span class="kw">library</span>(dplyr)</div>
-<div class="sourceLine" id="3" href="#3" data-line-number="3"></div>
-<div class="sourceLine" id="4" href="#4" data-line-number="4">df =<span class="st"> </span><span class="kw"><a href="reference/r_package_repos.html">r_package_repos</a></span>(<span class="dt">username =</span> <span class="st">"muschellij2"</span>)</div>
-<div class="sourceLine" id="5" href="#5" data-line-number="5">mine =<span class="st"> </span>df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/dplyr/topics/filter">filter</a></span>(<span class="op">!</span>fork <span class="op">&amp;</span><span class="st"> </span>r_repo)</div>
-<div class="sourceLine" id="6" href="#6" data-line-number="6">mine =<span class="st"> </span>mine <span class="op">%&gt;%</span><span class="st"> </span>
-</div>
-<div class="sourceLine" id="7" href="#7" data-line-number="7">
-<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/dplyr/topics/filter">filter</a></span>(<span class="op">!</span><span class="kw">grepl</span>(<span class="st">"^test"</span>, bare)) </div>
-<div class="sourceLine" id="8" href="#8" data-line-number="8">mine =<span class="st"> </span><span class="kw"><a href="reference/package_table.html">package_table</a></span>(mine)</div>
-<div class="sourceLine" id="9" href="#9" data-line-number="9"><span class="co">#&gt; Warning in readLines(file): incomplete final line found on '/</span></div>
-<div class="sourceLine" id="10" href="#10" data-line-number="10"><span class="co">#&gt; var/folders/1s/wrtqcpxn685_zk570bnx9_rr0000gr/T//RtmpciEt2f/</span></div>
-<div class="sourceLine" id="11" href="#11" data-line-number="11"><span class="co">#&gt; file3c9160cd1a20_DESCRIPTION'</span></div>
-<div class="sourceLine" id="12" href="#12" data-line-number="12"><span class="co">#&gt; Warning in readLines(file): incomplete final line found on '/</span></div>
-<div class="sourceLine" id="13" href="#13" data-line-number="13"><span class="co">#&gt; var/folders/1s/wrtqcpxn685_zk570bnx9_rr0000gr/T//RtmpciEt2f/</span></div>
-<div class="sourceLine" id="14" href="#14" data-line-number="14"><span class="co">#&gt; file3c91516d60ab_DESCRIPTION'</span></div>
-<div class="sourceLine" id="15" href="#15" data-line-number="15">knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>(mine)</div></code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(muschpack) </a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">df =<span class="st"> </span><span class="kw"><a href="reference/r_package_repos.html">r_package_repos</a></span>(<span class="dt">username =</span> <span class="st">"muschellij2"</span>)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">mine =<span class="st"> </span>df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="op">!</span>fork <span class="op">&amp;</span><span class="st"> </span>r_repo)</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">mine =<span class="st"> </span>mine <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="op">!</span><span class="kw">grepl</span>(<span class="st">"^test"</span>, bare)) </a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">mine =<span class="st"> </span><span class="kw"><a href="reference/package_table.html">package_table</a></span>(mine)</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; Warning in readLines(file): incomplete final line found on '/</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; var/folders/1s/wrtqcpxn685_zk570bnx9_rr0000gr/T//Rtmpx7dtqL/</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; fileaa49454fd5b6_DESCRIPTION'</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; Warning in readLines(file): incomplete final line found on '/</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; var/folders/1s/wrtqcpxn685_zk570bnx9_rr0000gr/T//Rtmpx7dtqL/</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; fileaa491295ce2d_DESCRIPTION'</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14">knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>(mine)</a></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th style="text-align: left;">GitHub Link</th>
@@ -122,17 +132,6 @@
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/diffr/index.html"><img src="http://cranlogs.r-pkg.org/badges/diffr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/muschellij2/fslr">fslr</a></td>
-<td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/fslr"><img src="https://travis-ci.org/muschellij2/fslr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
-<td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/fslr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/fslr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
-<td style="text-align: left;"><a href="https://github.com/muschellij2/fslr/issues">1</a></td>
-<td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">2.17.0</td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=fslr"><img src="http://www.r-pkg.org/badges/version-ago/fslr" alt="CRAN status"></a></td>
-<td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/fslr/index.html"><img src="http://cranlogs.r-pkg.org/badges/fslr" alt="CRANlogs downloads"></a></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/gcite">gcite</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/gcite"><img src="https://travis-ci.org/muschellij2/gcite.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/gcite"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/gcite?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -143,29 +142,29 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=gcite"><img src="http://www.r-pkg.org/badges/version-ago/gcite" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/gcite/index.html"><img src="http://cranlogs.r-pkg.org/badges/gcite" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neuroc.deps">neuroc.deps</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/neuroc.deps"><img src="https://travis-ci.org/muschellij2/neuroc.deps.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/neuroc-deps"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neuroc-deps?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neuroc.deps/issues">1</a></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.13.10</td>
+<td style="text-align: left;">0.13.12</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=neuroc.deps"><embed src="http://www.r-pkg.org/badges/version-ago/neuroc.deps"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/neuroc.deps/index.html"><embed src="http://cranlogs.r-pkg.org/badges/neuroc.deps"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neurocInstall">neurocInstall</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/neurocInstall"><img src="https://travis-ci.org/muschellij2/neurocInstall.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/neurocInstall"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurocInstall?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neurocInstall/issues">1</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.8.0</td>
+<td style="text-align: left;">0.9.1</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=neurocInstall"><img src="http://www.r-pkg.org/badges/version-ago/neurocInstall" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/neurocInstall/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurocInstall" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/papayar">papayar</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/papayar"><img src="https://travis-ci.org/muschellij2/papayar.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/papayar"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/papayar?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -176,7 +175,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=papayar"><img src="http://www.r-pkg.org/badges/version-ago/papayar" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/papayar/index.html"><img src="http://cranlogs.r-pkg.org/badges/papayar" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/papayaWidget">papayaWidget</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/papayaWidget"><img src="https://travis-ci.org/muschellij2/papayaWidget.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/papayaWidget"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/papayaWidget?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -187,7 +186,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=papayaWidget"><img src="http://www.r-pkg.org/badges/version-ago/papayaWidget" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/papayaWidget/index.html"><img src="http://cranlogs.r-pkg.org/badges/papayaWidget" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/processVISION">processVISION</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/processVISION"><img src="https://travis-ci.org/muschellij2/processVISION.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/processVISION"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/processVISION?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -198,7 +197,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=processVISION"><img src="http://www.r-pkg.org/badges/version-ago/processVISION" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/processVISION/index.html"><img src="http://cranlogs.r-pkg.org/badges/processVISION" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/rcamino">rcamino</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/rcamino"><img src="https://travis-ci.org/muschellij2/rcamino.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/rcamino"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/rcamino?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -209,7 +208,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=rcamino"><img src="http://www.r-pkg.org/badges/version-ago/rcamino" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/rcamino/index.html"><img src="http://cranlogs.r-pkg.org/badges/rcamino" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/spm12r">spm12r</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/spm12r"><img src="https://travis-ci.org/muschellij2/spm12r.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/spm12r"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/spm12r?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -220,7 +219,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=spm12r"><img src="http://www.r-pkg.org/badges/version-ago/spm12r" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/spm12r/index.html"><img src="http://cranlogs.r-pkg.org/badges/spm12r" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/WhiteStripe">WhiteStripe</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/WhiteStripe"><img src="https://travis-ci.org/muschellij2/WhiteStripe.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/WhiteStripe"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/WhiteStripe?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -231,7 +230,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=WhiteStripe"><img src="http://www.r-pkg.org/badges/version-ago/WhiteStripe" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/WhiteStripe/index.html"><img src="http://cranlogs.r-pkg.org/badges/WhiteStripe" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/afnir">afnir</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/afnir"><img src="https://travis-ci.org/muschellij2/afnir.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/afnir"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/afnir?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -242,7 +241,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=afnir"><img src="http://www.r-pkg.org/badges/version-ago/afnir" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/afnir/index.html"><img src="http://cranlogs.r-pkg.org/badges/afnir" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/alvin">alvin</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/alvin"><img src="https://travis-ci.org/muschellij2/alvin.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/alvin"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/alvin?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -253,18 +252,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=alvin"><img src="http://www.r-pkg.org/badges/version-ago/alvin" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/alvin/index.html"><img src="http://cranlogs.r-pkg.org/badges/alvin" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/biobankr">biobankr</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/biobankr"><img src="https://travis-ci.org/muschellij2/biobankr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/biobankr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/biobankr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/biobankr/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.5.5.3</td>
+<td style="text-align: left;">0.6.2.9001</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=biobankr"><img src="http://www.r-pkg.org/badges/version-ago/biobankr" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/biobankr/index.html"><img src="http://cranlogs.r-pkg.org/badges/biobankr" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/brainR">brainR</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/brainR"><img src="https://travis-ci.org/muschellij2/brainR.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/brainR"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/brainR?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -275,7 +274,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=brainR"><img src="http://www.r-pkg.org/badges/version-ago/brainR" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/brainR/index.html"><img src="http://cranlogs.r-pkg.org/badges/brainR" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/checkout">checkout</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/checkout"><img src="https://travis-ci.org/muschellij2/checkout.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/checkout"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/checkout?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -286,7 +285,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=checkout"><img src="http://www.r-pkg.org/badges/version-ago/checkout" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/checkout/index.html"><img src="http://cranlogs.r-pkg.org/badges/checkout" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/cifti">cifti</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/cifti"><img src="https://travis-ci.org/muschellij2/cifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/cifti"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/cifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -297,7 +296,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=cifti"><img src="http://www.r-pkg.org/badges/version-ago/cifti" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/cifti/index.html"><img src="http://cranlogs.r-pkg.org/badges/cifti" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/ct.malf.templates">ct.malf.templates</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/ct.malf.templates"><img src="https://travis-ci.org/muschellij2/ct.malf.templates.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/ct-malf-templates"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ct-malf-templates?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -308,18 +307,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ct.malf.templates"><embed src="http://www.r-pkg.org/badges/version-ago/ct.malf.templates"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ct.malf.templates/index.html"><embed src="http://cranlogs.r-pkg.org/badges/ct.malf.templates"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/dcm2niir">dcm2niir</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/dcm2niir"><img src="https://travis-ci.org/muschellij2/dcm2niir.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/dcm2niir"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/dcm2niir?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/dcm2niir/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">0.5.2</td>
+<td style="text-align: left;">0.6.1</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=dcm2niir"><img src="http://www.r-pkg.org/badges/version-ago/dcm2niir" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/dcm2niir/index.html"><img src="http://cranlogs.r-pkg.org/badges/dcm2niir" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/dcmtk">dcmtk</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/dcmtk"><img src="https://travis-ci.org/muschellij2/dcmtk.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/dcmtk"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/dcmtk?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -330,7 +329,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=dcmtk"><img src="http://www.r-pkg.org/badges/version-ago/dcmtk" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/dcmtk/index.html"><img src="http://cranlogs.r-pkg.org/badges/dcmtk" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/dhs">dhs</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/dhs"><img src="https://travis-ci.org/muschellij2/dhs.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/dhs"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/dhs?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -341,7 +340,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=dhs"><img src="http://www.r-pkg.org/badges/version-ago/dhs" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/dhs/index.html"><img src="http://cranlogs.r-pkg.org/badges/dhs" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/drammsr">drammsr</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/drammsr"><img src="https://travis-ci.org/muschellij2/drammsr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/drammsr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/drammsr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -352,7 +351,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=drammsr"><img src="http://www.r-pkg.org/badges/version-ago/drammsr" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/drammsr/index.html"><img src="http://cranlogs.r-pkg.org/badges/drammsr" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/dtitk">dtitk</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/dtitk"><img src="https://travis-ci.org/muschellij2/dtitk.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/dtitk"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/dtitk?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -363,7 +362,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=dtitk"><img src="http://www.r-pkg.org/badges/version-ago/dtitk" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/dtitk/index.html"><img src="http://cranlogs.r-pkg.org/badges/dtitk" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/ENARSC2015">ENARSC2015</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/ENARSC2015"><img src="https://travis-ci.org/muschellij2/ENARSC2015.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/ENARSC2015"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ENARSC2015?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -374,18 +373,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ENARSC2015"><img src="http://www.r-pkg.org/badges/version-ago/ENARSC2015" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ENARSC2015/index.html"><img src="http://cranlogs.r-pkg.org/badges/ENARSC2015" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/extrantsr">extrantsr</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/extrantsr"><img src="https://travis-ci.org/muschellij2/extrantsr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/extrantsr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/extrantsr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/extrantsr/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">3.6.0</td>
+<td style="text-align: left;">3.7.2</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=extrantsr"><img src="http://www.r-pkg.org/badges/version-ago/extrantsr" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/extrantsr/index.html"><img src="http://cranlogs.r-pkg.org/badges/extrantsr" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/fedreporter">fedreporter</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/fedreporter"><img src="https://travis-ci.org/muschellij2/fedreporter.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/fedreporter"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/fedreporter?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -395,6 +394,17 @@
 <td style="text-align: left;">0.2.1</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=fedreporter"><img src="http://www.r-pkg.org/badges/version-ago/fedreporter" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/fedreporter/index.html"><img src="http://cranlogs.r-pkg.org/badges/fedreporter" alt="CRANlogs downloads"></a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/muschellij2/fragmentation">fragmentation</a></td>
+<td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/fragmentation"><img src="https://travis-ci.org/muschellij2/fragmentation.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/fragmentation"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/fragmentation?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td style="text-align: left;"><a href="https://github.com/muschellij2/fragmentation/issues">0</a></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;">0.2.1.9000</td>
+<td style="text-align: left;"><a href="https://cran.r-project.org/package=fragmentation"><img src="http://www.r-pkg.org/badges/version-ago/fragmentation" alt="CRAN status"></a></td>
+<td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/fragmentation/index.html"><img src="http://cranlogs.r-pkg.org/badges/fragmentation" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/freesurfer">freesurfer</a></td>
@@ -408,6 +418,17 @@
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/freesurfer/index.html"><img src="http://cranlogs.r-pkg.org/badges/freesurfer" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/muschellij2/fslr">fslr</a></td>
+<td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/fslr"><img src="https://travis-ci.org/muschellij2/fslr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/fslr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/fslr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td style="text-align: left;"><a href="https://github.com/muschellij2/fslr/issues">0</a></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2.17.3</td>
+<td style="text-align: left;"><a href="https://cran.r-project.org/package=fslr"><img src="http://www.r-pkg.org/badges/version-ago/fslr" alt="CRAN status"></a></td>
+<td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/fslr/index.html"><img src="http://cranlogs.r-pkg.org/badges/fslr" alt="CRANlogs downloads"></a></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/ggneuro">ggneuro</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/ggneuro"><img src="https://travis-ci.org/muschellij2/ggneuro.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/ggneuro"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ggneuro?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -418,7 +439,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ggneuro"><img src="http://www.r-pkg.org/badges/version-ago/ggneuro" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ggneuro/index.html"><img src="http://cranlogs.r-pkg.org/badges/ggneuro" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/ghtravis">ghtravis</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/ghtravis"><img src="https://travis-ci.org/muschellij2/ghtravis.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/ghtravis"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ghtravis?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -429,7 +450,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ghtravis"><img src="http://www.r-pkg.org/badges/version-ago/ghtravis" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ghtravis/index.html"><img src="http://cranlogs.r-pkg.org/badges/ghtravis" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/gifti">gifti</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/gifti"><img src="https://travis-ci.org/muschellij2/gifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/gifti"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/gifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -440,7 +461,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=gifti"><img src="http://www.r-pkg.org/badges/version-ago/gifti" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/gifti/index.html"><img src="http://cranlogs.r-pkg.org/badges/gifti" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/glassdoor">glassdoor</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/glassdoor"><img src="https://travis-ci.org/muschellij2/glassdoor.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/glassdoor"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/glassdoor?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -451,7 +472,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=glassdoor"><img src="http://www.r-pkg.org/badges/version-ago/glassdoor" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/glassdoor/index.html"><img src="http://cranlogs.r-pkg.org/badges/glassdoor" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/gluc">gluc</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/gluc"><img src="https://travis-ci.org/muschellij2/gluc.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/gluc"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/gluc?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -462,7 +483,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=gluc"><img src="http://www.r-pkg.org/badges/version-ago/gluc" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/gluc/index.html"><img src="http://cranlogs.r-pkg.org/badges/gluc" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/googleCite">googleCite</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/googleCite"><img src="https://travis-ci.org/muschellij2/googleCite.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/googleCite"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/googleCite?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -473,7 +494,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=googleCite"><img src="http://www.r-pkg.org/badges/version-ago/googleCite" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/googleCite/index.html"><img src="http://cranlogs.r-pkg.org/badges/googleCite" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/greedyreg">greedyreg</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/greedyreg"><img src="https://travis-ci.org/muschellij2/greedyreg.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/greedyreg"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/greedyreg?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -484,7 +505,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=greedyreg"><img src="http://www.r-pkg.org/badges/version-ago/greedyreg" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/greedyreg/index.html"><img src="http://cranlogs.r-pkg.org/badges/greedyreg" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/I2C2">I2C2</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/I2C2"><img src="https://travis-ci.org/muschellij2/I2C2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/I2C2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/I2C2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -495,7 +516,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=I2C2"><img src="http://www.r-pkg.org/badges/version-ago/I2C2" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/I2C2/index.html"><img src="http://cranlogs.r-pkg.org/badges/I2C2" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/ichseg">ichseg</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/ichseg"><img src="https://travis-ci.org/muschellij2/ichseg.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/ichseg"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ichseg?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -506,7 +527,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ichseg"><img src="http://www.r-pkg.org/badges/version-ago/ichseg" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ichseg/index.html"><img src="http://cranlogs.r-pkg.org/badges/ichseg" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/itksnapr">itksnapr</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/itksnapr"><img src="https://travis-ci.org/muschellij2/itksnapr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/itksnapr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/itksnapr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -517,7 +538,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=itksnapr"><img src="http://www.r-pkg.org/badges/version-ago/itksnapr" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/itksnapr/index.html"><img src="http://cranlogs.r-pkg.org/badges/itksnapr" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/jhudsl">jhudsl</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/jhudsl"><img src="https://travis-ci.org/muschellij2/jhudsl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/jhudsl"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/jhudsl?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -528,7 +549,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=jhudsl"><img src="http://www.r-pkg.org/badges/version-ago/jhudsl" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/jhudsl/index.html"><img src="http://cranlogs.r-pkg.org/badges/jhudsl" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21">kirby21</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21"><img src="https://travis-ci.org/muschellij2/kirby21.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -539,7 +560,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21"><img src="http://www.r-pkg.org/badges/version-ago/kirby21" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21/index.html"><img src="http://cranlogs.r-pkg.org/badges/kirby21" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21_scan_1">kirby21.scan.1</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21_scan_1"><img src="https://travis-ci.org/muschellij2/kirby21_scan_1.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scan_1"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scan_1?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -550,7 +571,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21_scan_1"><img src="http://www.r-pkg.org/badges/version-ago/kirby21_scan_1" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21_scan_1/index.html"><img src="http://cranlogs.r-pkg.org/badges/kirby21_scan_1" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21_scan_2">kirby21.scan.2</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21_scan_2"><img src="https://travis-ci.org/muschellij2/kirby21_scan_2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scan_2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scan_2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -561,7 +582,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21_scan_2"><img src="http://www.r-pkg.org/badges/version-ago/kirby21_scan_2" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21_scan_2/index.html"><img src="http://cranlogs.r-pkg.org/badges/kirby21_scan_2" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21_scanner">kirby21.scanner</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21_scanner"><img src="https://travis-ci.org/muschellij2/kirby21_scanner.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21_scanner"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21_scanner?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -572,7 +593,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21_scanner"><img src="http://www.r-pkg.org/badges/version-ago/kirby21_scanner" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21_scanner/index.html"><img src="http://cranlogs.r-pkg.org/badges/kirby21_scanner" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.asl">kirby21.asl</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.asl"><img src="https://travis-ci.org/muschellij2/kirby21.asl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-asl"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-asl?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -583,7 +604,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.asl"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.asl"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.asl/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.asl"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.base">kirby21.base</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.base"><img src="https://travis-ci.org/muschellij2/kirby21.base.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-base"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-base?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -594,7 +615,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.base"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.base"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.base/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.base"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.det2">kirby21.det2</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.det2"><img src="https://travis-ci.org/muschellij2/kirby21.det2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-det2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-det2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -605,7 +626,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.det2"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.det2"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.det2/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.det2"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.dti">kirby21.dti</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.dti"><img src="https://travis-ci.org/muschellij2/kirby21.dti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-dti"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-dti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -616,7 +637,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.dti"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.dti"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.dti/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.dti"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.flair">kirby21.flair</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.flair"><img src="https://travis-ci.org/muschellij2/kirby21.flair.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-flair"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-flair?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -627,7 +648,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.flair"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.flair"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.flair/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.flair"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.fmri">kirby21.fmri</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.fmri"><img src="https://travis-ci.org/muschellij2/kirby21.fmri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-fmri"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-fmri?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -638,7 +659,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.fmri"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.fmri"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.fmri/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.fmri"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.mt">kirby21.mt</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.mt"><img src="https://travis-ci.org/muschellij2/kirby21.mt.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-mt"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-mt?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -649,7 +670,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.mt"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.mt"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.mt/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.mt"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.smri">kirby21.smri</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.smri"><img src="https://travis-ci.org/muschellij2/kirby21.smri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-smri"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-smri?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -660,7 +681,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.smri"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.smri"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.smri/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.smri"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.survey">kirby21.survey</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.survey"><img src="https://travis-ci.org/muschellij2/kirby21.survey.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-survey"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-survey?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -671,7 +692,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.survey"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.survey"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.survey/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.survey"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.t1">kirby21.t1</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.t1"><img src="https://travis-ci.org/muschellij2/kirby21.t1.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-t1"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-t1?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -682,7 +703,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.t1"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.t1"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.t1/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.t1"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.t2">kirby21.t2</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.t2"><img src="https://travis-ci.org/muschellij2/kirby21.t2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-t2"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-t2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -693,7 +714,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.t2"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.t2"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.t2/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.t2"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/kirby21.vaso">kirby21.vaso</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/kirby21.vaso"><img src="https://travis-ci.org/muschellij2/kirby21.vaso.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/kirby21-vaso"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/kirby21-vaso?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -704,7 +725,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.vaso"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.vaso"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.vaso/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.vaso"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/latexreadme">latexreadme</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/latexreadme"><img src="https://travis-ci.org/muschellij2/latexreadme.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/latexreadme"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/latexreadme?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -714,6 +735,17 @@
 <td style="text-align: left;">0.1</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=latexreadme"><img src="http://www.r-pkg.org/badges/version-ago/latexreadme" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/latexreadme/index.html"><img src="http://cranlogs.r-pkg.org/badges/latexreadme" alt="CRANlogs downloads"></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://github.com/muschellij2/leanpubr">leanpubr</a></td>
+<td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/leanpubr"><img src="https://travis-ci.org/muschellij2/leanpubr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/leanpubr"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/leanpubr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td style="text-align: left;"><a href="https://github.com/muschellij2/leanpubr/issues">0</a></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;">0.2.1</td>
+<td style="text-align: left;"><a href="https://cran.r-project.org/package=leanpubr"><img src="http://www.r-pkg.org/badges/version-ago/leanpubr" alt="CRAN status"></a></td>
+<td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/leanpubr/index.html"><img src="http://cranlogs.r-pkg.org/badges/leanpubr" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/lungct">lungct</a></td>
@@ -771,6 +803,17 @@
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/mrtrix/index.html"><img src="http://cranlogs.r-pkg.org/badges/mrtrix" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
+<td style="text-align: left;"><a href="https://github.com/muschellij2/msdata">msdata</a></td>
+<td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/msdata"><img src="https://travis-ci.org/muschellij2/msdata.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/msdata"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/msdata?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td style="text-align: left;"><a href="https://github.com/muschellij2/msdata/issues">0</a></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;">0.1.2</td>
+<td style="text-align: left;"><a href="https://cran.r-project.org/package=msdata"><img src="http://www.r-pkg.org/badges/version-ago/msdata" alt="CRAN status"></a></td>
+<td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/msdata/index.html"><img src="http://cranlogs.r-pkg.org/badges/msdata" alt="CRANlogs downloads"></a></td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/msseg">msseg</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/msseg"><img src="https://travis-ci.org/muschellij2/msseg.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/msseg"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/msseg?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -781,18 +824,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=msseg"><img src="http://www.r-pkg.org/badges/version-ago/msseg" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/msseg/index.html"><img src="http://cranlogs.r-pkg.org/badges/msseg" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/muschflow">muschflow</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/muschflow"><img src="https://travis-ci.org/muschellij2/muschflow.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/muschflow"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/muschflow?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/muschflow/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.8.1</td>
+<td style="text-align: left;">0.8.2</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=muschflow"><img src="http://www.r-pkg.org/badges/version-ago/muschflow" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/muschflow/index.html"><img src="http://cranlogs.r-pkg.org/badges/muschflow" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/muschmisc">muschmisc</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/muschmisc"><img src="https://travis-ci.org/muschellij2/muschmisc.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/muschmisc"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/muschmisc?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -803,7 +846,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=muschmisc"><img src="http://www.r-pkg.org/badges/version-ago/muschmisc" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/muschmisc/index.html"><img src="http://cranlogs.r-pkg.org/badges/muschmisc" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/muschpack">muschpack</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/muschpack"><img src="https://travis-ci.org/muschellij2/muschpack.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/muschpack"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/muschpack?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -814,7 +857,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=muschpack"><img src="http://www.r-pkg.org/badges/version-ago/muschpack" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/muschpack/index.html"><img src="http://cranlogs.r-pkg.org/badges/muschpack" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neurobase">neurobase</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/neurobase"><img src="https://travis-ci.org/muschellij2/neurobase.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/neurobase"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurobase?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -825,18 +868,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=neurobase"><img src="http://www.r-pkg.org/badges/version-ago/neurobase" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/neurobase/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurobase" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neurohcp">neurohcp</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/neurohcp"><img src="https://travis-ci.org/muschellij2/neurohcp.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/neurohcp"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurohcp?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neurohcp/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">0.7.2</td>
+<td style="text-align: left;">0.7.3</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=neurohcp"><img src="http://www.r-pkg.org/badges/version-ago/neurohcp" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/neurohcp/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurohcp" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neurometrics">neurometrics</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/neurometrics"><img src="https://travis-ci.org/muschellij2/neurometrics.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/neurometrics"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurometrics?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -847,18 +890,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=neurometrics"><img src="http://www.r-pkg.org/badges/version-ago/neurometrics" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/neurometrics/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurometrics" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neurovault">neurovault</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/neurovault"><img src="https://travis-ci.org/muschellij2/neurovault.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/neurovault"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/neurovault?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/neurovault/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.5.3</td>
+<td style="text-align: left;">0.5.5</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=neurovault"><img src="http://www.r-pkg.org/badges/version-ago/neurovault" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/neurovault/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurovault" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/nitrc">nitrc</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/nitrc"><img src="https://travis-ci.org/muschellij2/nitrc.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/nitrc"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/nitrc?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -869,7 +912,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=nitrc"><img src="http://www.r-pkg.org/badges/version-ago/nitrc" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/nitrc/index.html"><img src="http://cranlogs.r-pkg.org/badges/nitrc" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/oro.nifti">oro.nifti</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/oro.nifti"><img src="https://travis-ci.org/muschellij2/oro.nifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/oro-nifti"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/oro-nifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -880,7 +923,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=oro.nifti"><embed src="http://www.r-pkg.org/badges/version-ago/oro.nifti"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/oro.nifti/index.html"><embed src="http://cranlogs.r-pkg.org/badges/oro.nifti"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/oslerInstall">oslerInstall</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/oslerInstall"><img src="https://travis-ci.org/muschellij2/oslerInstall.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/oslerInstall"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/oslerInstall?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -891,7 +934,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=oslerInstall"><img src="http://www.r-pkg.org/badges/version-ago/oslerInstall" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/oslerInstall/index.html"><img src="http://cranlogs.r-pkg.org/badges/oslerInstall" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/rdcm2niix">rdcm2niix</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/rdcm2niix"><img src="https://travis-ci.org/muschellij2/rdcm2niix.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/rdcm2niix"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/rdcm2niix?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -902,7 +945,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=rdcm2niix"><img src="http://www.r-pkg.org/badges/version-ago/rdcm2niix" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/rdcm2niix/index.html"><img src="http://cranlogs.r-pkg.org/badges/rdcm2niix" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/robex">robex</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/robex"><img src="https://travis-ci.org/muschellij2/robex.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/robex"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/robex?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -913,18 +956,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=robex"><img src="http://www.r-pkg.org/badges/version-ago/robex" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/robex/index.html"><img src="http://cranlogs.r-pkg.org/badges/robex" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/rscopus">rscopus</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/rscopus"><img src="https://travis-ci.org/muschellij2/rscopus.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/rscopus"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/rscopus?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/rscopus/issues">0</a></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.5.3</td>
+<td style="text-align: left;">0.5.5</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=rscopus"><img src="http://www.r-pkg.org/badges/version-ago/rscopus" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/rscopus/index.html"><img src="http://cranlogs.r-pkg.org/badges/rscopus" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/smallpdf">smallPDF</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/smallpdf"><img src="https://travis-ci.org/muschellij2/smallpdf.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/smallpdf"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/smallpdf?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -935,18 +978,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=smallpdf"><img src="http://www.r-pkg.org/badges/version-ago/smallpdf" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/smallpdf/index.html"><img src="http://cranlogs.r-pkg.org/badges/smallpdf" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/smri.process">smri.process</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/smri.process"><img src="https://travis-ci.org/muschellij2/smri.process.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/smri-process"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/smri-process?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/smri.process/issues">0</a></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">0.4.6</td>
+<td style="text-align: left;">0.6.1.9001</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=smri.process"><embed src="http://www.r-pkg.org/badges/version-ago/smri.process"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/smri.process/index.html"><embed src="http://cranlogs.r-pkg.org/badges/smri.process"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/ssgraph">ssgraph</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/ssgraph"><img src="https://travis-ci.org/muschellij2/ssgraph.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/ssgraph"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/ssgraph?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -957,18 +1000,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ssgraph"><img src="http://www.r-pkg.org/badges/version-ago/ssgraph" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ssgraph/index.html"><img src="http://cranlogs.r-pkg.org/badges/ssgraph" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/stapler">stapler</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/stapler"><img src="https://travis-ci.org/muschellij2/stapler.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/stapler"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/stapler?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/muschellij2/stapler/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.6.3</td>
+<td style="text-align: left;">0.6.5</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=stapler"><img src="http://www.r-pkg.org/badges/version-ago/stapler" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/stapler/index.html"><img src="http://cranlogs.r-pkg.org/badges/stapler" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/statamd">statamd</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/statamd"><img src="https://travis-ci.org/muschellij2/statamd.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/statamd"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/statamd?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -979,7 +1022,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=statamd"><img src="http://www.r-pkg.org/badges/version-ago/statamd" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/statamd/index.html"><img src="http://cranlogs.r-pkg.org/badges/statamd" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/muschellij2/travisrgl">travisrgl</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/muschellij2/travisrgl"><img src="https://travis-ci.org/muschellij2/travisrgl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/muschellij2/travisrgl"><img src="https://ci.appveyor.com/api/projects/status/github/muschellij2/travisrgl?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -993,14 +1036,11 @@
 </tbody>
 </table>
 <section id="neuroconductor-report" class="level2"><h2>Neuroconductor report</h2>
-<pre class="sourceCode r"><code class="sourceCode r"><div class="sourceLine" id="1" href="#1" data-line-number="1">
-<span class="kw">library</span>(muschpack) </div>
-<div class="sourceLine" id="2" href="#2" data-line-number="2">
-<span class="kw">library</span>(dplyr)</div>
-<div class="sourceLine" id="3" href="#3" data-line-number="3"></div>
-<div class="sourceLine" id="4" href="#4" data-line-number="4">df =<span class="st"> </span><span class="kw"><a href="reference/r_package_repos.html">r_package_repos</a></span>(<span class="dt">username =</span> <span class="st">"neuroconductor"</span>)</div>
-<div class="sourceLine" id="5" href="#5" data-line-number="5">neuroc =<span class="st"> </span><span class="kw"><a href="reference/package_table.html">package_table</a></span>(df)</div>
-<div class="sourceLine" id="6" href="#6" data-line-number="6">knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>(neuroc)</div></code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(muschpack) </a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">df =<span class="st"> </span><span class="kw"><a href="reference/r_package_repos.html">r_package_repos</a></span>(<span class="dt">username =</span> <span class="st">"neuroconductor"</span>)</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">neuroc =<span class="st"> </span><span class="kw"><a href="reference/package_table.html">package_table</a></span>(df)</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>(neuroc)</a></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th style="text-align: left;">GitHub Link</th>
@@ -1043,7 +1083,7 @@
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/ANTsRCore/issues">0</a></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.4.6.1</td>
+<td style="text-align: left;">0.4.7</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ANTsRCore"><img src="http://www.r-pkg.org/badges/version-ago/ANTsRCore" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ANTsRCore/index.html"><img src="http://cranlogs.r-pkg.org/badges/ANTsRCore" alt="CRANlogs downloads"></a></td>
 </tr>
@@ -1087,7 +1127,7 @@
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/dcm2niir/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">0.5.2</td>
+<td style="text-align: left;">0.6.1</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=dcm2niir"><img src="http://www.r-pkg.org/badges/version-ago/dcm2niir" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/dcm2niir/index.html"><img src="http://cranlogs.r-pkg.org/badges/dcm2niir" alt="CRANlogs downloads"></a></td>
 </tr>
@@ -1142,7 +1182,7 @@
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/extrantsr/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">3.6.0</td>
+<td style="text-align: left;">3.7.2</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=extrantsr"><img src="http://www.r-pkg.org/badges/version-ago/extrantsr" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/extrantsr/index.html"><img src="http://cranlogs.r-pkg.org/badges/extrantsr" alt="CRANlogs downloads"></a></td>
 </tr>
@@ -1158,6 +1198,17 @@
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/fmri/index.html"><img src="http://cranlogs.r-pkg.org/badges/fmri" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="even">
+<td style="text-align: left;"><a href="https://github.com/neuroconductor/fmriqa">fmriqa</a></td>
+<td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/fmriqa"><img src="https://travis-ci.org/neuroconductor/fmriqa.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/fmriqa"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/fmriqa?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td style="text-align: left;"><a href="https://github.com/neuroconductor/fmriqa/issues">0</a></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;">0.2.0</td>
+<td style="text-align: left;"><a href="https://cran.r-project.org/package=fmriqa"><img src="http://www.r-pkg.org/badges/version-ago/fmriqa" alt="CRAN status"></a></td>
+<td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/fmriqa/index.html"><img src="http://cranlogs.r-pkg.org/badges/fmriqa" alt="CRANlogs downloads"></a></td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/freesurfer">freesurfer</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/freesurfer"><img src="https://travis-ci.org/neuroconductor/freesurfer.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/freesurfer"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/freesurfer?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1168,18 +1219,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=freesurfer"><img src="http://www.r-pkg.org/badges/version-ago/freesurfer" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/freesurfer/index.html"><img src="http://cranlogs.r-pkg.org/badges/freesurfer" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/fslr">fslr</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/fslr"><img src="https://travis-ci.org/neuroconductor/fslr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/fslr"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/fslr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/fslr/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">2.17.0</td>
+<td style="text-align: left;">2.17.3</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=fslr"><img src="http://www.r-pkg.org/badges/version-ago/fslr" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/fslr/index.html"><img src="http://cranlogs.r-pkg.org/badges/fslr" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/ggBrain">ggBrain</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/ggBrain"><img src="https://travis-ci.org/neuroconductor/ggBrain.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/ggBrain"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/ggBrain?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1190,7 +1241,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ggBrain"><img src="http://www.r-pkg.org/badges/version-ago/ggBrain" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ggBrain/index.html"><img src="http://cranlogs.r-pkg.org/badges/ggBrain" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/ggneuro">ggneuro</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/ggneuro"><img src="https://travis-ci.org/neuroconductor/ggneuro.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/ggneuro"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/ggneuro?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1201,7 +1252,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ggneuro"><img src="http://www.r-pkg.org/badges/version-ago/ggneuro" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ggneuro/index.html"><img src="http://cranlogs.r-pkg.org/badges/ggneuro" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/gifti">gifti</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/gifti"><img src="https://travis-ci.org/neuroconductor/gifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/gifti"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/gifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1212,7 +1263,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=gifti"><img src="http://www.r-pkg.org/badges/version-ago/gifti" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/gifti/index.html"><img src="http://cranlogs.r-pkg.org/badges/gifti" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/hcp">hcp</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/hcp"><img src="https://travis-ci.org/neuroconductor/hcp.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/hcp"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/hcp?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1223,7 +1274,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=hcp"><img src="http://www.r-pkg.org/badges/version-ago/hcp" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/hcp/index.html"><img src="http://cranlogs.r-pkg.org/badges/hcp" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/I2C2">I2C2</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/I2C2"><img src="https://travis-ci.org/neuroconductor/I2C2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/I2C2"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/I2C2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1234,7 +1285,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=I2C2"><img src="http://www.r-pkg.org/badges/version-ago/I2C2" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/I2C2/index.html"><img src="http://cranlogs.r-pkg.org/badges/I2C2" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/ichseg">ichseg</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/ichseg"><img src="https://travis-ci.org/neuroconductor/ichseg.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/ichseg"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/ichseg?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1245,7 +1296,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ichseg"><img src="http://www.r-pkg.org/badges/version-ago/ichseg" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ichseg/index.html"><img src="http://cranlogs.r-pkg.org/badges/ichseg" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/ITKR">ITKR</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/ITKR"><img src="https://travis-ci.org/neuroconductor/ITKR.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/ITKR"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/ITKR?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1256,7 +1307,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ITKR"><img src="http://www.r-pkg.org/badges/version-ago/ITKR" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ITKR/index.html"><img src="http://cranlogs.r-pkg.org/badges/ITKR" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/itksnapr">itksnapr</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/itksnapr"><img src="https://travis-ci.org/neuroconductor/itksnapr.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/itksnapr"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/itksnapr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1267,7 +1318,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=itksnapr"><img src="http://www.r-pkg.org/badges/version-ago/itksnapr" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/itksnapr/index.html"><img src="http://cranlogs.r-pkg.org/badges/itksnapr" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.asl">kirby21.asl</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.asl"><img src="https://travis-ci.org/neuroconductor/kirby21.asl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-asl"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-asl?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1278,7 +1329,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.asl"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.asl"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.asl/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.asl"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.base">kirby21.base</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.base"><img src="https://travis-ci.org/neuroconductor/kirby21.base.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-base"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-base?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1289,7 +1340,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.base"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.base"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.base/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.base"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.det2">kirby21.det2</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.det2"><img src="https://travis-ci.org/neuroconductor/kirby21.det2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-det2"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-det2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1300,7 +1351,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.det2"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.det2"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.det2/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.det2"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.dti">kirby21.dti</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.dti"><img src="https://travis-ci.org/neuroconductor/kirby21.dti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-dti"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-dti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1311,7 +1362,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.dti"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.dti"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.dti/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.dti"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.flair">kirby21.flair</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.flair"><img src="https://travis-ci.org/neuroconductor/kirby21.flair.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-flair"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-flair?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1322,7 +1373,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.flair"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.flair"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.flair/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.flair"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.fmri">kirby21.fmri</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.fmri"><img src="https://travis-ci.org/neuroconductor/kirby21.fmri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-fmri"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-fmri?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1333,7 +1384,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.fmri"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.fmri"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.fmri/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.fmri"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.mt">kirby21.mt</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.mt"><img src="https://travis-ci.org/neuroconductor/kirby21.mt.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-mt"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-mt?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1344,7 +1395,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.mt"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.mt"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.mt/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.mt"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.smri">kirby21.smri</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.smri"><img src="https://travis-ci.org/neuroconductor/kirby21.smri.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-smri"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-smri?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1355,7 +1406,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.smri"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.smri"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.smri/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.smri"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.t1">kirby21.t1</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.t1"><img src="https://travis-ci.org/neuroconductor/kirby21.t1.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-t1"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-t1?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1366,7 +1417,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.t1"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.t1"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.t1/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.t1"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.t2">kirby21.t2</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.t2"><img src="https://travis-ci.org/neuroconductor/kirby21.t2.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-t2"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-t2?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1377,7 +1428,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.t2"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.t2"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.t2/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.t2"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/kirby21.vaso">kirby21.vaso</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/kirby21.vaso"><img src="https://travis-ci.org/neuroconductor/kirby21.vaso.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/kirby21-vaso"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/kirby21-vaso?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1388,7 +1439,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=kirby21.vaso"><embed src="http://www.r-pkg.org/badges/version-ago/kirby21.vaso"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/kirby21.vaso/index.html"><embed src="http://cranlogs.r-pkg.org/badges/kirby21.vaso"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/lungct">lungct</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/lungct"><img src="https://travis-ci.org/neuroconductor/lungct.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/lungct"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/lungct?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1399,7 +1450,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=lungct"><img src="http://www.r-pkg.org/badges/version-ago/lungct" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/lungct/index.html"><img src="http://cranlogs.r-pkg.org/badges/lungct" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/malf.templates">malf.templates</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/malf.templates"><img src="https://travis-ci.org/neuroconductor/malf.templates.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/malf-templates"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/malf-templates?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1409,6 +1460,17 @@
 <td style="text-align: left;">0.3</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=malf.templates"><embed src="http://www.r-pkg.org/badges/version-ago/malf.templates"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/malf.templates/index.html"><embed src="http://cranlogs.r-pkg.org/badges/malf.templates"></embed></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://github.com/neuroconductor/mimosa">mimosa</a></td>
+<td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/mimosa"><img src="https://travis-ci.org/neuroconductor/mimosa.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/mimosa"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/mimosa?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td style="text-align: left;"><a href="https://github.com/neuroconductor/mimosa/issues">0</a></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;">0.5.3</td>
+<td style="text-align: left;"><a href="https://cran.r-project.org/package=mimosa"><img src="http://www.r-pkg.org/badges/version-ago/mimosa" alt="CRAN status"></a></td>
+<td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/mimosa/index.html"><img src="http://cranlogs.r-pkg.org/badges/mimosa" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/MNITemplate">MNITemplate</a></td>
@@ -1450,7 +1512,7 @@
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/neurocInstall/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.8.0</td>
+<td style="text-align: left;">0.9.1</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=neurocInstall"><img src="http://www.r-pkg.org/badges/version-ago/neurocInstall" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/neurocInstall/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurocInstall" alt="CRANlogs downloads"></a></td>
 </tr>
@@ -1472,11 +1534,22 @@
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/neurohcp/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">0.7.2</td>
+<td style="text-align: left;">0.7.3</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=neurohcp"><img src="http://www.r-pkg.org/badges/version-ago/neurohcp" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/neurohcp/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurohcp" alt="CRANlogs downloads"></a></td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/neuroconductor/neurovault">neurovault</a></td>
+<td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/neurovault"><img src="https://travis-ci.org/neuroconductor/neurovault.svg?branch=master" alt="Travis-CI Build Status"></a></td>
+<td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/neurovault"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/neurovault?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
+<td style="text-align: left;"><a href="https://github.com/neuroconductor/neurovault/issues">0</a></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;"><i class="fa fa-check"></i></td>
+<td style="text-align: left;">0.5.5</td>
+<td style="text-align: left;"><a href="https://cran.r-project.org/package=neurovault"><img src="http://www.r-pkg.org/badges/version-ago/neurovault" alt="CRAN status"></a></td>
+<td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/neurovault/index.html"><img src="http://cranlogs.r-pkg.org/badges/neurovault" alt="CRANlogs downloads"></a></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/oasis">oasis</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/oasis"><img src="https://travis-ci.org/neuroconductor/oasis.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/oasis"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/oasis?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1487,7 +1560,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=oasis"><img src="http://www.r-pkg.org/badges/version-ago/oasis" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/oasis/index.html"><img src="http://cranlogs.r-pkg.org/badges/oasis" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/oro.asl">oro.asl</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/oro.asl"><img src="https://travis-ci.org/neuroconductor/oro.asl.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/oro-asl"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/oro-asl?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1498,7 +1571,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=oro.asl"><embed src="http://www.r-pkg.org/badges/version-ago/oro.asl"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/oro.asl/index.html"><embed src="http://cranlogs.r-pkg.org/badges/oro.asl"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/oro.dicom">oro.dicom</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/oro.dicom"><img src="https://travis-ci.org/neuroconductor/oro.dicom.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/oro-dicom"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/oro-dicom?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1509,7 +1582,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=oro.dicom"><embed src="http://www.r-pkg.org/badges/version-ago/oro.dicom"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/oro.dicom/index.html"><embed src="http://cranlogs.r-pkg.org/badges/oro.dicom"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/oro.nifti">oro.nifti</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/oro.nifti"><img src="https://travis-ci.org/neuroconductor/oro.nifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/oro-nifti"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/oro-nifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1520,7 +1593,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=oro.nifti"><embed src="http://www.r-pkg.org/badges/version-ago/oro.nifti"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/oro.nifti/index.html"><embed src="http://cranlogs.r-pkg.org/badges/oro.nifti"></embed></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/oro.pet">oro.pet</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/oro.pet"><img src="https://travis-ci.org/neuroconductor/oro.pet.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/oro-pet"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/oro-pet?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1531,7 +1604,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=oro.pet"><embed src="http://www.r-pkg.org/badges/version-ago/oro.pet"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/oro.pet/index.html"><embed src="http://cranlogs.r-pkg.org/badges/oro.pet"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/papayar">papayar</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/papayar"><img src="https://travis-ci.org/neuroconductor/papayar.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/papayar"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/papayar?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1542,7 +1615,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=papayar"><img src="http://www.r-pkg.org/badges/version-ago/papayar" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/papayar/index.html"><img src="http://cranlogs.r-pkg.org/badges/papayar" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/PGICA">PGICA</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/PGICA"><img src="https://travis-ci.org/neuroconductor/PGICA.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/PGICA"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/PGICA?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1553,7 +1626,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=PGICA"><img src="http://www.r-pkg.org/badges/version-ago/PGICA" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/PGICA/index.html"><img src="http://cranlogs.r-pkg.org/badges/PGICA" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/RAVEL">RAVEL</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/RAVEL"><img src="https://travis-ci.org/neuroconductor/RAVEL.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/RAVEL"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/RAVEL?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1564,7 +1637,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=RAVEL"><img src="http://www.r-pkg.org/badges/version-ago/RAVEL" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/RAVEL/index.html"><img src="http://cranlogs.r-pkg.org/badges/RAVEL" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/rcamino">rcamino</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/rcamino"><img src="https://travis-ci.org/neuroconductor/rcamino.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/rcamino"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/rcamino?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1575,7 +1648,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=rcamino"><img src="http://www.r-pkg.org/badges/version-ago/rcamino" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/rcamino/index.html"><img src="http://cranlogs.r-pkg.org/badges/rcamino" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/RNifti">RNifti</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/RNifti"><img src="https://travis-ci.org/neuroconductor/RNifti.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/RNifti"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/RNifti?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1586,7 +1659,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=RNifti"><img src="http://www.r-pkg.org/badges/version-ago/RNifti" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/RNifti/index.html"><img src="http://cranlogs.r-pkg.org/badges/RNifti" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/RNiftyReg">RNiftyReg</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/RNiftyReg"><img src="https://travis-ci.org/neuroconductor/RNiftyReg.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/RNiftyReg"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/RNiftyReg?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1597,7 +1670,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=RNiftyReg"><img src="http://www.r-pkg.org/badges/version-ago/RNiftyReg" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/RNiftyReg/index.html"><img src="http://cranlogs.r-pkg.org/badges/RNiftyReg" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/robex">robex</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/robex"><img src="https://travis-ci.org/neuroconductor/robex.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/robex"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/robex?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1608,7 +1681,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=robex"><img src="http://www.r-pkg.org/badges/version-ago/robex" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/robex/index.html"><img src="http://cranlogs.r-pkg.org/badges/robex" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/ROpenCVLite">ROpenCVLite</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/ROpenCVLite"><img src="https://travis-ci.org/neuroconductor/ROpenCVLite.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/ROpenCVLite"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/ROpenCVLite?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1619,7 +1692,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=ROpenCVLite"><img src="http://www.r-pkg.org/badges/version-ago/ROpenCVLite" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/ROpenCVLite/index.html"><img src="http://cranlogs.r-pkg.org/badges/ROpenCVLite" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/Rvision">Rvision</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/Rvision"><img src="https://travis-ci.org/neuroconductor/Rvision.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/Rvision"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/Rvision?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1630,18 +1703,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=Rvision"><img src="http://www.r-pkg.org/badges/version-ago/Rvision" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/Rvision/index.html"><img src="http://cranlogs.r-pkg.org/badges/Rvision" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/smri.process">smri.process</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/smri.process"><img src="https://travis-ci.org/neuroconductor/smri.process.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/smri-process"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/smri-process?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/smri.process/issues">0</a></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">0.4.6</td>
+<td style="text-align: left;">0.6.1.9000</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=smri.process"><embed src="http://www.r-pkg.org/badges/version-ago/smri.process"></embed></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/smri.process/index.html"><embed src="http://cranlogs.r-pkg.org/badges/smri.process"></embed></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/spant">spant</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/spant"><img src="https://travis-ci.org/neuroconductor/spant.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/spant"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/spant?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1652,7 +1725,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=spant"><img src="http://www.r-pkg.org/badges/version-ago/spant" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/spant/index.html"><img src="http://cranlogs.r-pkg.org/badges/spant" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/spm12r">spm12r</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/spm12r"><img src="https://travis-ci.org/neuroconductor/spm12r.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/spm12r"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/spm12r?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1663,18 +1736,18 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=spm12r"><img src="http://www.r-pkg.org/badges/version-ago/spm12r" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/spm12r/index.html"><img src="http://cranlogs.r-pkg.org/badges/spm12r" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/stapler">stapler</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/stapler"><img src="https://travis-ci.org/neuroconductor/stapler.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/stapler"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/stapler?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/stapler/issues">0</a></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
 <td style="text-align: left;"><i class="fa fa-check"></i></td>
-<td style="text-align: left;">0.6.3</td>
+<td style="text-align: left;">0.6.5</td>
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=stapler"><img src="http://www.r-pkg.org/badges/version-ago/stapler" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/stapler/index.html"><img src="http://cranlogs.r-pkg.org/badges/stapler" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/sublime">sublime</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/sublime"><img src="https://travis-ci.org/neuroconductor/sublime.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/sublime"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/sublime?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1685,7 +1758,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=sublime"><img src="http://www.r-pkg.org/badges/version-ago/sublime" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/sublime/index.html"><img src="http://cranlogs.r-pkg.org/badges/sublime" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/waveslim">waveslim</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/waveslim"><img src="https://travis-ci.org/neuroconductor/waveslim.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/waveslim"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/waveslim?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
@@ -1696,7 +1769,7 @@
 <td style="text-align: left;"><a href="https://cran.r-project.org/package=waveslim"><img src="http://www.r-pkg.org/badges/version-ago/waveslim" alt="CRAN status"></a></td>
 <td style="text-align: left;"><a href="http://cran.rstudio.com/web/packages/waveslim/index.html"><img src="http://cranlogs.r-pkg.org/badges/waveslim" alt="CRANlogs downloads"></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="https://github.com/neuroconductor/WhiteStripe">WhiteStripe</a></td>
 <td style="text-align: left;"><a href="https://travis-ci.org/neuroconductor/WhiteStripe"><img src="https://travis-ci.org/neuroconductor/WhiteStripe.svg?branch=master" alt="Travis-CI Build Status"></a></td>
 <td style="text-align: left;"><a href="https://ci.appveyor.com/project/neuroconductor/WhiteStripe"><img src="https://ci.appveyor.com/api/projects/status/github/neuroconductor/WhiteStripe?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></td>
