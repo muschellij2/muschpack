@@ -8,3 +8,4 @@
 ^README\.utf8\.md$
 docs
 README_cache/*
+makefile

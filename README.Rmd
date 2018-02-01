@@ -42,11 +42,13 @@ mine = mine %>%
   filter(!grepl("^test", bare)) 
 mine = package_table(mine)
 knitr::kable(mine)
+
 ```
 
 ## Neuroconductor report
 
 ```{r neuroc, cache=TRUE}
+
 library(muschpack) 
 library(dplyr)
 df = r_package_repos(username = "neuroconductor")
