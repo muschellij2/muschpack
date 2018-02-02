@@ -33,11 +33,11 @@ mine = mine %>%
   filter(!grepl("^test", bare)) 
 mine = package_table(mine)
 #> Warning in readLines(file): incomplete final line found on '/
-#> var/folders/1s/wrtqcpxn685_zk570bnx9_rr0000gr/T//Rtmpx03pql/
-#> file2a9b1c52dcc0_DESCRIPTION'
+#> var/folders/1s/wrtqcpxn685_zk570bnx9_rr0000gr/T//Rtmp83STwS/
+#> fileb96141e6b96a_DESCRIPTION'
 #> Warning in readLines(file): incomplete final line found on '/
-#> var/folders/1s/wrtqcpxn685_zk570bnx9_rr0000gr/T//Rtmpx03pql/
-#> file2a9b28aed364_DESCRIPTION'
+#> var/folders/1s/wrtqcpxn685_zk570bnx9_rr0000gr/T//Rtmp83STwS/
+#> fileb9615ab725ed_DESCRIPTION'
 knitr::kable(mine)
 ```
 
