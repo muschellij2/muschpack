@@ -24,7 +24,13 @@ download_dcf = function(urls) {
     if (is.na(x)) {
       return(NA_character_)
     }
-    desc::description$new(x)
+    res = try( {
+      desc::description$new(x)
+    })
+    if (inherits(res, "try-error")) {
+      return(NA_character_)
+    }
+    return(res)
     })
   L = list(files = dl,
            dcfs = dcfs)

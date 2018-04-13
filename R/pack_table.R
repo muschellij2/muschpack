@@ -6,7 +6,7 @@
 #'
 #' @return A \code{data.frame} that works well with \code{kable}
 #' @export
-#'
+#' @importFrom dplyr arrange desc mutate select filter
 package_table = function(df, make_check = TRUE) {
   mine = df %>%
     arrange(desc(open_issues_count), bare)
