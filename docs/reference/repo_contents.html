@@ -18,13 +18,25 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Get Repository Contents — repo_contents" />
+
+<meta property="og:description" content="Retrieves Github Repository Contents/filenames" />
+<meta name="twitter:card" content="summary" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -47,8 +59,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">muschpack</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">muschpack</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.7.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -82,6 +98,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -89,21 +106,25 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get Repository Contents</h1>
+    <small class="dont-index">Source: <a href='https://github.com/muschellij2/muschpack/blob/master/R/repo_contents.R'><code>R/repo_contents.R</code></a></small>
+    <div class="hidden name"><code>repo_contents.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Retrieves Github Repository Contents/filenames</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>repo_contents</span>(<span class='no'>repo</span>, <span class='no'>...</span>)
 
 <span class='fu'>repo_files</span>(<span class='no'>repo</span>, <span class='no'>...</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
@@ -174,16 +195,16 @@
 #&gt;   {
 #&gt;     "name": ".travis.yml",
 #&gt;     "path": ".travis.yml",
-#&gt;     "sha": "de5e30a85177e0ac58f6fdee98cba5da96b61c10",
-#&gt;     "size": 660,
+#&gt;     "sha": "6f455d2f45040deab787d718ebd7c62edbd1ee08",
+#&gt;     "size": 658,
 #&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/.travis.yml?ref=master",
 #&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/.travis.yml",
-#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/de5e30a85177e0ac58f6fdee98cba5da96b61c10",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/6f455d2f45040deab787d718ebd7c62edbd1ee08",
 #&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/.travis.yml",
 #&gt;     "type": "file",
 #&gt;     "_links": {
 #&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/.travis.yml?ref=master",
-#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/de5e30a85177e0ac58f6fdee98cba5da96b61c10",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/6f455d2f45040deab787d718ebd7c62edbd1ee08",
 #&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/.travis.yml"
 #&gt;     }
 #&gt;   },
@@ -206,32 +227,32 @@
 #&gt;   {
 #&gt;     "name": "DESCRIPTION",
 #&gt;     "path": "DESCRIPTION",
-#&gt;     "sha": "4874adba1d6a76dcd02f53e93df1e63482249e6a",
-#&gt;     "size": 1159,
+#&gt;     "sha": "7309c3bb41861807159ae5001481a808235f5ff4",
+#&gt;     "size": 1216,
 #&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/DESCRIPTION?ref=master",
 #&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/DESCRIPTION",
-#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/4874adba1d6a76dcd02f53e93df1e63482249e6a",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/7309c3bb41861807159ae5001481a808235f5ff4",
 #&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/DESCRIPTION",
 #&gt;     "type": "file",
 #&gt;     "_links": {
 #&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/DESCRIPTION?ref=master",
-#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/4874adba1d6a76dcd02f53e93df1e63482249e6a",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/7309c3bb41861807159ae5001481a808235f5ff4",
 #&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/DESCRIPTION"
 #&gt;     }
 #&gt;   },
 #&gt;   {
 #&gt;     "name": "NAMESPACE",
 #&gt;     "path": "NAMESPACE",
-#&gt;     "sha": "9f80a67ab661e61bef7e5d940610c7032bf7136c",
-#&gt;     "size": 4928,
+#&gt;     "sha": "9582e1d137763652130f573cab24a75dc40c3931",
+#&gt;     "size": 5258,
 #&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/NAMESPACE?ref=master",
 #&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/NAMESPACE",
-#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/9f80a67ab661e61bef7e5d940610c7032bf7136c",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/9582e1d137763652130f573cab24a75dc40c3931",
 #&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/NAMESPACE",
 #&gt;     "type": "file",
 #&gt;     "_links": {
 #&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/NAMESPACE?ref=master",
-#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/9f80a67ab661e61bef7e5d940610c7032bf7136c",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/9582e1d137763652130f573cab24a75dc40c3931",
 #&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/NAMESPACE"
 #&gt;     }
 #&gt;   },
@@ -254,16 +275,16 @@
 #&gt;   {
 #&gt;     "name": "R",
 #&gt;     "path": "R",
-#&gt;     "sha": "0ab20b9ad509ba6e321aac678576a0729bfe1449",
+#&gt;     "sha": "9af95041eba680d3c43fbe722f3829ef18a0f81c",
 #&gt;     "size": 0,
 #&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/R?ref=master",
 #&gt;     "html_url": "https://github.com/muschellij2/fslr/tree/master/R",
-#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/0ab20b9ad509ba6e321aac678576a0729bfe1449",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/9af95041eba680d3c43fbe722f3829ef18a0f81c",
 #&gt;     "download_url": {},
 #&gt;     "type": "dir",
 #&gt;     "_links": {
 #&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/R?ref=master",
-#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/0ab20b9ad509ba6e321aac678576a0729bfe1449",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/9af95041eba680d3c43fbe722f3829ef18a0f81c",
 #&gt;       "html": "https://github.com/muschellij2/fslr/tree/master/R"
 #&gt;     }
 #&gt;   },
@@ -334,32 +355,32 @@
 #&gt;   {
 #&gt;     "name": "docs",
 #&gt;     "path": "docs",
-#&gt;     "sha": "843f0111173e96142a96b6f109d42dc2f93da59e",
+#&gt;     "sha": "d87170df312987581beb9621abbe3276e886f5d2",
 #&gt;     "size": 0,
 #&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/docs?ref=master",
 #&gt;     "html_url": "https://github.com/muschellij2/fslr/tree/master/docs",
-#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/843f0111173e96142a96b6f109d42dc2f93da59e",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/d87170df312987581beb9621abbe3276e886f5d2",
 #&gt;     "download_url": {},
 #&gt;     "type": "dir",
 #&gt;     "_links": {
 #&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/docs?ref=master",
-#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/843f0111173e96142a96b6f109d42dc2f93da59e",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/d87170df312987581beb9621abbe3276e886f5d2",
 #&gt;       "html": "https://github.com/muschellij2/fslr/tree/master/docs"
 #&gt;     }
 #&gt;   },
 #&gt;   {
 #&gt;     "name": "fslr.Rproj",
 #&gt;     "path": "fslr.Rproj",
-#&gt;     "sha": "58747babf5089bcd969bac4ace011b6ea18ba76f",
-#&gt;     "size": 422,
+#&gt;     "sha": "79bded204c2072279d156c054c888b45824537fc",
+#&gt;     "size": 423,
 #&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/fslr.Rproj?ref=master",
 #&gt;     "html_url": "https://github.com/muschellij2/fslr/blob/master/fslr.Rproj",
-#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/58747babf5089bcd969bac4ace011b6ea18ba76f",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/blobs/79bded204c2072279d156c054c888b45824537fc",
 #&gt;     "download_url": "https://raw.githubusercontent.com/muschellij2/fslr/master/fslr.Rproj",
 #&gt;     "type": "file",
 #&gt;     "_links": {
 #&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/fslr.Rproj?ref=master",
-#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/58747babf5089bcd969bac4ace011b6ea18ba76f",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/blobs/79bded204c2072279d156c054c888b45824537fc",
 #&gt;       "html": "https://github.com/muschellij2/fslr/blob/master/fslr.Rproj"
 #&gt;     }
 #&gt;   },
@@ -574,16 +595,16 @@
 #&gt;   {
 #&gt;     "name": "man",
 #&gt;     "path": "man",
-#&gt;     "sha": "e03a2612d901a86453cc81c792c08a836b56c495",
+#&gt;     "sha": "838f643421a7e1f7a546cb718543e632b83dc25d",
 #&gt;     "size": 0,
 #&gt;     "url": "https://api.github.com/repos/muschellij2/fslr/contents/man?ref=master",
 #&gt;     "html_url": "https://github.com/muschellij2/fslr/tree/master/man",
-#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/e03a2612d901a86453cc81c792c08a836b56c495",
+#&gt;     "git_url": "https://api.github.com/repos/muschellij2/fslr/git/trees/838f643421a7e1f7a546cb718543e632b83dc25d",
 #&gt;     "download_url": {},
 #&gt;     "type": "dir",
 #&gt;     "_links": {
 #&gt;       "self": "https://api.github.com/repos/muschellij2/fslr/contents/man?ref=master",
-#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/e03a2612d901a86453cc81c792c08a836b56c495",
+#&gt;       "git": "https://api.github.com/repos/muschellij2/fslr/git/trees/838f643421a7e1f7a546cb718543e632b83dc25d",
 #&gt;       "html": "https://github.com/muschellij2/fslr/tree/master/man"
 #&gt;     }
 #&gt;   },
@@ -656,11 +677,14 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+
