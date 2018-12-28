@@ -120,7 +120,8 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>r_package_repos</span>(<span class='kw'>username</span> <span class='kw'>=</span> <span class='st'>"muschellij2"</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>r_package_repos</span>(<span class='kw'>username</span> <span class='kw'>=</span> <span class='st'>"muschellij2"</span>, <span class='kw'>travis_type</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"org"</span>,
+  <span class='st'>"com"</span>), <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -128,6 +129,10 @@
     <tr>
       <th>username</th>
       <td><p>GitHub username</p></td>
+    </tr>
+    <tr>
+      <th>travis_type</th>
+      <td><p>Are you using Travis <code>.com</code> or <code>.org</code>?</p></td>
     </tr>
     <tr>
       <th>...</th>

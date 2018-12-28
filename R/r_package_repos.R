@@ -25,13 +25,16 @@ make_dl_badge = function(pkg) {
 #'
 #' @return A nested \code{data.frame} of repository information
 #' @param username GitHub username
+#' @param travis_type Are you using Travis \code{.com} or \code{.org}?
 #' @param ... additional to arguments to \code{get_all_repos}
 #' @export
 #' @importFrom pbapply pbsapply
 #' @importFrom data.table rbindlist
 #' @importFrom dplyr data_frame as_data_frame "%>%" one_of
 #' @importFrom tidyr nest
-r_package_repos = function(username = "muschellij2", ...) {
+r_package_repos = function(
+  username = "muschellij2",
+  travis_type = c("org", "com"), ...) {
   repos = get_all_repos(username = username, ...)
   remotes = vapply(repos, `[[`, "full_name", FUN.VALUE = character(1))
   names(repos) = remotes
@@ -91,7 +94,11 @@ r_package_repos = function(username = "muschellij2", ...) {
   df = df %>% tidyr::nest(dplyr::one_of(cn), .key = repo_info)
   df$fork = as.logical(df$fork)
   df$open_issues_count = as.numeric(df$open_issues_count)
-  df$travis = paste0("https://travis-ci.org/", df$remote)
+  travis_type = match.arg(travis_type)
+
+  df$travis = paste0("https://travis-ci.",
+                     travis_type, "/",
+                     df$remote)
 
   df$travis_badge = paste0(
     "[![Travis-CI Build Status](",

@@ -4,10 +4,13 @@
 \alias{r_package_repos}
 \title{Package Repository Information}
 \usage{
-r_package_repos(username = "muschellij2", ...)
+r_package_repos(username = "muschellij2", travis_type = c("org",
+  "com"), ...)
 }
 \arguments{
 \item{username}{GitHub username}
+
+\item{travis_type}{Are you using Travis \code{.com} or \code{.org}?}
 
 \item{...}{additional to arguments to \code{get_all_repos}}
 }

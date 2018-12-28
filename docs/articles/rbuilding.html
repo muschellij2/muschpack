@@ -79,7 +79,7 @@
       <h1>Building R Packages</h1>
                         <h4 class="author">Vignette Author</h4>
             
-            <h4 class="date">2018-11-19</h4>
+            <h4 class="date">2018-12-28</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/muschellij2/muschpack/blob/master/vignettes/rbuilding.Rmd"><code>vignettes/rbuilding.Rmd</code></a></small>
       <div class="hidden name"><code>rbuilding.Rmd</code></div>
@@ -142,13 +142,13 @@
 <h1 class="hasAnchor">
 <a href="#building-ci-and-readme" class="anchor"></a>Building CI and README</h1>
 <p>I run the short version of the code on <a href="http://johnmuschelli.com/neuroc/getting_ready_for_submission/index.html" class="uri">http://johnmuschelli.com/neuroc/getting_ready_for_submission/index.html</a>, which essentially to run (in R):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_git">use_git</a></span>()</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_github">use_github</a></span>() <span class="co"># must have GITHUB_PAT set up</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_readme_rmd">use_readme_md</a></span>()</a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_vignette">use_vignette</a></span>(<span class="st">"my-vignette"</span>)</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_testthat">use_testthat</a></span>()</a>
-<a class="sourceLine" id="cb3-6" data-line-number="6">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/ci">use_appveyor</a></span>()</a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/ci">use_travis</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_git">use_git</a></span>()</a>
+<a class="sourceLine" id="cb3-2" title="2">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_github">use_github</a></span>() <span class="co"># must have GITHUB_PAT set up</span></a>
+<a class="sourceLine" id="cb3-3" title="3">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_readme_rmd">use_readme_md</a></span>()</a>
+<a class="sourceLine" id="cb3-4" title="4">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_vignette">use_vignette</a></span>(<span class="st">"my-vignette"</span>)</a>
+<a class="sourceLine" id="cb3-5" title="5">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/use_testthat">use_testthat</a></span>()</a>
+<a class="sourceLine" id="cb3-6" title="6">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/ci">use_appveyor</a></span>()</a>
+<a class="sourceLine" id="cb3-7" title="7">usethis<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/usethis/topics/ci">use_travis</a></span>()</a></code></pre></div>
 <p>And edit the following files:</p>
 <div id="travis-yml" class="section level2">
 <h2 class="hasAnchor">
