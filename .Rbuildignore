@@ -1,3 +1,5 @@
+^R/travis_unknown_badge\.R$
+^data-raw$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^appveyor\.yml$

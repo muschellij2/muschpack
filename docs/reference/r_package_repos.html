@@ -61,7 +61,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">muschpack</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.7.1</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.7.2</span>
       </span>
     </div>
 
@@ -120,8 +120,8 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>r_package_repos</span>(<span class='kw'>username</span> <span class='kw'>=</span> <span class='st'>"muschellij2"</span>, <span class='kw'>travis_type</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"org"</span>,
-  <span class='st'>"com"</span>), <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>r_package_repos</span>(<span class='kw'>username</span> <span class='kw'>=</span> <span class='st'>"muschellij2"</span>, <span class='kw'>travis_type</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"org"</span>, <span class='st'>"com"</span>,
+  <span class='st'>"dynamic"</span>), <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -132,7 +132,9 @@
     </tr>
     <tr>
       <th>travis_type</th>
-      <td><p>Are you using Travis <code>.com</code> or <code>.org</code>?</p></td>
+      <td><p>Are you using Travis <code>.com</code> or <code>.org</code>?
+If <code>dynamic</code>, will use <code><a href='travis_svg_status.html'>travis_svg_status</a></code> to
+try to figure it out.</p></td>
     </tr>
     <tr>
       <th>...</th>

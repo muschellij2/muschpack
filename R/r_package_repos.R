@@ -26,6 +26,8 @@ make_dl_badge = function(pkg) {
 #' @return A nested \code{data.frame} of repository information
 #' @param username GitHub username
 #' @param travis_type Are you using Travis \code{.com} or \code{.org}?
+#' If \code{dynamic}, will use \code{\link{travis_svg_status}} to
+#' try to figure it out.
 #' @param ... additional to arguments to \code{get_all_repos}
 #' @export
 #' @importFrom pbapply pbsapply
@@ -34,7 +36,7 @@ make_dl_badge = function(pkg) {
 #' @importFrom tidyr nest
 r_package_repos = function(
   username = "muschellij2",
-  travis_type = c("org", "com"), ...) {
+  travis_type = c("org", "com", "dynamic"), ...) {
   repos = get_all_repos(username = username, ...)
   remotes = vapply(repos, `[[`, "full_name", FUN.VALUE = character(1))
   names(repos) = remotes
@@ -95,6 +97,26 @@ r_package_repos = function(
   df$fork = as.logical(df$fork)
   df$open_issues_count = as.numeric(df$open_issues_count)
   travis_type = match.arg(travis_type)
+  xtravis_type = travis_type
+
+  ##################################
+  # Check the build status
+  ##################################
+  if (xtravis_type %in% "dynamic") {
+    travis_type = "org"
+  }
+  df$travis = paste0("https://travis-ci.",
+                     travis_type, "/",
+                     df$remote)
+  if (xtravis_type %in% "dynamic") {
+    svg = paste0(df$travis, ".svg?branch=master")
+    build_status = travis_svg_status(svg)
+    travis_type = rep(travis_type, nrow(df))
+    switchers = build_status %in% "unknown"
+    switchers = switchers | is.na(build_status)
+    travis_type[ switchers ] = "com"
+  }
+  ##################################
 
   df$travis = paste0("https://travis-ci.",
                      travis_type, "/",

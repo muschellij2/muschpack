@@ -37,14 +37,13 @@ devtools::install_github("muschellij2/muschpack")
 library(muschpack)
 library(dplyr)
 df = r_package_repos(username = "muschellij2", 
-                     travis_type = "org")
+                     travis_type = "dynamic")
 mine = df %>% filter(!fork & r_repo)
 
 mine = mine %>% 
   filter(!grepl("^test", bare)) 
 mine = package_table(mine)
 knitr::kable(mine)
-
 ```
 
 ## Neuroconductor report
@@ -52,7 +51,8 @@ knitr::kable(mine)
 ```{r neuroc, cache=TRUE}
 library(muschpack) 
 library(dplyr)
-df = r_package_repos(username = "neuroconductor")
+df = r_package_repos(username = "neuroconductor",
+                     travis_type = "com")
 neuroc = package_table(df)
 knitr::kable(neuroc)
 

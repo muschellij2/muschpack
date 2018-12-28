@@ -4,13 +4,15 @@
 \alias{r_package_repos}
 \title{Package Repository Information}
 \usage{
-r_package_repos(username = "muschellij2", travis_type = c("org",
-  "com"), ...)
+r_package_repos(username = "muschellij2", travis_type = c("org", "com",
+  "dynamic"), ...)
 }
 \arguments{
 \item{username}{GitHub username}
 
-\item{travis_type}{Are you using Travis \code{.com} or \code{.org}?}
+\item{travis_type}{Are you using Travis \code{.com} or \code{.org}?
+If \code{dynamic}, will use \code{\link{travis_svg_status}} to
+try to figure it out.}
 
 \item{...}{additional to arguments to \code{get_all_repos}}
 }

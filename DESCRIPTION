@@ -19,7 +19,9 @@ Imports:
     pbapply,
     gh,
     desc,
-    httr
+    httr,
+    xml2,
+    utils
 Suggests: knitr,
     rmarkdown,
     testthat
